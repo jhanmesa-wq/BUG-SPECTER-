@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact • Xeon Bvg VIP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="top-brand">Xeon Bvg VIP</div>
+
+  <div class="app">
+    <div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">Xeon Bvg VIP</div>
+  <a class="nav-item" href="/dashboard">Dashboard</a>
+  <a class="nav-item" href="/about">About</a>
+  <a class="nav-item" href="/help">Help</a>
+  <a class="nav-item" href="/contact">Follow us</a>
+  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
+</div>
+
+    <div class="main-content">
+    <div class="top-brand">Xeon Bvg VIP</div>
+      <div class="page-title">FOLLOW US</div>
+
+      <div class="contact-list">
+        <a href="https://instagram.com/unicorn_xeon13" target="_blank" class="contact-item">
+          <span class="contact-label">Instagram</span>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="https://youtube.com/@DGXeon" target="_blank" class="contact-item">
+          <span class="contact-label">YouTube</span>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="https://t.me/dgxeon13" target="_blank" class="contact-item">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb86YtF8PgsPng5PTf1o" target="_blank" class="contact-item">
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/occult-bg.js"></script>
+</body>
+</html>
