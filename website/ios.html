@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iOS • Xeon Bvg VIP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('xeon_token')) {
+    window.location.href = '/';
+  }
+</script>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="top-brand">Xeon Bvg VIP</div>
+
+  <div class="app">
+    <div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">Xeon Bvg VIP</div>
+  <a class="nav-item" href="/dashboard">Dashboard</a>
+  <a class="nav-item" href="/about">About</a>
+  <a class="nav-item" href="/help">Help</a>
+  <a class="nav-item" href="/contact">Follow us</a>
+  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
+</div>
+
+    <div class="main-content">
+  <div class="page-title">iOS BVG</div>
+
+  <!-- RICHXIOS (original) -->
+  <div class="form-card" style="margin-bottom: 24px;">
+    <div class="input-group">
+      <label>RICHXIOS</label>
+      <input type="text" id="target-ios" placeholder="+1234567890">
+    </div>
+    <button class="btn btn-primary" id="send-btn-ios" onclick="sendGreetingCustom('ios', 'target-ios', 'send-btn-ios')">EXECUTE</button>
+  </div>
+
+  <!-- RICHXIOSV2 (new) -->
+  <div class="form-card">
+    <div class="input-group">
+      <label>
+        RICHXIOSV2
+        <span style="
+          background: #00ff9d;
+          color: #021002;
+          font-size: 0.65rem;
+          font-weight: 700;
+          padding: 2px 7px;
+          border-radius: 6px;
+          margin-left: 8px;
+          letter-spacing: 1px;
+          vertical-align: middle;
+        ">NEW</span>
+      </label>
+      <input type="text" id="target-richxiosv2" placeholder="+1234567890">
+    </div>
+    <button class="btn btn-primary" id="send-btn-richxiosv2" onclick="sendGreetingCustom('richxiosv2', 'target-richxiosv2', 'send-btn-richxiosv2')">EXECUTE</button>
+  </div>
+</div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script src="js/occult-bg.js"></script>
+</body>
+</html>

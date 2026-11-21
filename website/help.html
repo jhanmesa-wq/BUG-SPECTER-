@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help • Xeon WhatsApp Bvg</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('xeon_token')) {
+    window.location.href = '/';
+  }
+</script>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="top-brand">Xeon Bvg VIP</div>
+
+  <div class="app">
+    <div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">Xeon Bvg VIP</div>
+  <a class="nav-item" href="/dashboard">Dashboard</a>
+  <a class="nav-item" href="/about">About</a>
+  <a class="nav-item" href="/help">Help</a>
+  <a class="nav-item" href="/contact">Follow us</a>
+  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
+</div>
+
+    <div class="main-content">
+      <div class="page-title">HELP</div>
+      <div class="form-card" style="max-width:600px;">
+        <p style="line-height:1.8;font-size:0.95rem;">
+          <b>1.</b> Login using credentials<br><br>
+          <b>2.</b> Make sure server status shows <span style="color:#00ff9d;">ACTIVE</span><br><br>
+          <b>3.</b> Choose Android / iOS / Group Bvg<br><br>
+          <b>4.</b> Enter a valid WhatsApp number for number or Group JID for group<br><br>
+          <b>5.</b> Click EXECUTE<br><br>
+          <b>Note:</b> The number must be registered on WhatsApp and group JID must be valid
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script src="js/occult-bg.js"></script>
+</body>
+</html>

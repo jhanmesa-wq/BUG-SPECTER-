@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group • Xeon Bvg VIP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('xeon_token')) {
+    window.location.href = '/';
+  }
+</script>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="top-brand">Xeon Bvg VIP</div>
+
+  <div class="app">
+    <div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">Xeon Bvg VIP</div>
+  <a class="nav-item" href="/dashboard">Dashboard</a>
+  <a class="nav-item" href="/about">About</a>
+  <a class="nav-item" href="/help">Help</a>
+  <a class="nav-item" href="/contact">Follow us</a>
+  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
+</div>
+
+    <div class="main-content">
+      <div class="page-title">GROUP BVG</div>
+      <div class="form-card">
+        <div class="input-group">
+          <label>CRASHBETAGC</label>
+          <input type="text" id="target" placeholder="1203630xxxxxxxxx@g.us">
+        </div>
+        <button class="btn btn-primary" id="send-btn" onclick="sendGreeting('group')">EXECUTE</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script src="js/occult-bg.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard • Xeon Bvg VIP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body onload="loadDashboard()">
+<script>
+  if (!localStorage.getItem('xeon_token')) {
+    window.location.href = '/';
+  }
+</script>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="top-brand">Xeon Bvg VIP</div>
+
+  <div class="app">
+    <div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">Xeon Bvg VIP</div>
+  <a class="nav-item" href="/dashboard">Dashboard</a>
+  <a class="nav-item" href="/about">About</a>
+  <a class="nav-item" href="/help">Help</a>
+  <a class="nav-item" href="/contact">Follow us</a>
+  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
+</div>
+
+    <div class="main-content">
+      <div class="header">
+        <div>
+          <div style="font-family:'Orbitron';font-size:1.25rem;color:var(--green);">
+            Welcome, <span id="user-name">User</span>
+          </div>
+          <div id="expiry-text" style="display:none;font-size:0.78rem;color:var(--muted);margin-top:4px;"></div>
+        </div>
+        <div class="status">
+          <div id="status-dot" class="dot off"></div>
+          <span id="status-text">CHECKING...</span>
+        </div>
+      </div>
+
+      <div class="grid">
+                        <div class="cmd-card" onclick="location.href='/android'">
+          <h3>ANDROID BVG</h3>
+          <div class="count" style="line-height:1.7; margin-top:12px;">
+            RICHCRASH total usage: <span id="c-richcrash">0</span><br>
+            BLOKCRASH total usage: <span id="c-blokcrash">0</span>
+          </div>
+        </div>
+
+        <div class="cmd-card" onclick="location.href='/ios'">
+  <h3>iOS BVG</h3>
+  <div class="count" style="line-height:1.7; margin-top:12px;">
+    RICHXIOS total usage: <span id="c-ios">0</span><br>
+    RICHXIOSV2 total usage: <span id="c-richxiosv2">0</span>
+  </div>
+</div>
+        <!--<div class="cmd-card" onclick="location.href='/group'">
+          <h3>GROUP BVG</h3>
+          <p>CRASHBETAGC</p>
+          <div class="count">Global Total Executed: <span id="c-group">0</span> times</div>
+        </div> -->
+      </div>
+
+      <div style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;">LIVE CONSOLE</div>
+      <div class="console-box" id="console">
+        <div class="console-line">System ready...</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script src="js/occult-bg.js"></script>
+</body>
+</html>
