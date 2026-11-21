@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg: #030a03;
+  --card: #0a140a;
+  --green: #00ff9d;
+  --green2: #00c97a;
+  --muted: #5d8a6a;
+  --text: #d0ffe0;
+  --red: #ff4d4d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Moving particle background */
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Login */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--card);
+  border: 1px solid #163016;
+  border-radius: 18px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 0 40px #00ff9d15;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--green);
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-shadow: 0 0 18px #00ff9d66;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+}
+
+.input-group { margin-bottom: 18px; }
+.input-group label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--green2);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.input-group input {
+  width: 100%;
+  background: #061006;
+  border: 1px solid #1a3a1a;
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.25s;
+}
+.input-group input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 12px #00ff9d33;
+}
+
+.btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #00b36b, #00ff9d);
+  color: #021002;
+  margin-top: 8px;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #00ff9d55;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #1a3a1a;
+  color: var(--green2);
+  margin-top: 10px;
+}
+.btn-ghost:hover {
+  background: #00ff9d12;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-80px);
+  background: #0e1a0e;
+  border: 1px solid var(--green);
+  color: var(--text);
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 9999;
+  box-shadow: 0 0 25px #00ff9d33;
+  max-width: 90%;
+  text-align: center;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+.toast.error {
+  border-color: var(--red);
+  box-shadow: 0 0 25px #ff4d4d33;
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar / Drawer */
+.sidebar {
+  width: 240px;
+  background: #061006;
+  border-right: 1px solid #163016;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  transition: transform 0.3s;
+}
+
+.sidebar .logo-sm {
+  font-family: 'Orbitron';
+  font-size: 1.15rem;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+.nav-item:hover, .nav-item.active {
+  background: #00ff9d15;
+  color: var(--green);
+}
+
+.main-content {
+  margin-left: 240px;
+  flex: 1;
+  padding: 28px 32px;
+}
+
+/* Mobile drawer toggle */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 200;
+  background: #0a1a0a;
+  border: 1px solid #1a3a1a;
+  color: var(--green);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 70px 18px 30px;
+  }
+  .menu-btn { display: flex; align-items: center; justify-content: center; }
+}
+
+/* Status + Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  background: #061006;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #1a3a1a;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.dot.on { background: var(--green); box-shadow: 0 0 10px var(--green); }
+.dot.off { background: var(--red); box-shadow: 0 0 10px var(--red); }
+
+/* Cards grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.cmd-card {
+  background: var(--card);
+  border: 1px solid #163016;
+  border-radius: 14px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.cmd-card:hover {
+  border-color: var(--green);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px #00ff9d22;
+}
+.cmd-card h3 {
+  font-family: 'Orbitron';
+  font-size: 0.95rem;
+  color: var(--green);
+  margin-bottom: 6px;
+}
+.cmd-card p {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.cmd-card .count {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--green2);
+}
+
+/* Console */
+.console-box {
+  background: #040c04;
+  border: 1px solid #163016;
+  border-radius: 14px;
+  height: 200px;
+  overflow-y: auto;
+  padding: 14px;
+  font-size: 0.78rem;
+}
+.console-line {
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+.console-line.ok { color: var(--green); }
+.console-line.err { color: var(--red); }
+
+/* Form pages */
+.page-title {
+  font-family: 'Orbitron';
+  font-size: 1.3rem;
+  color: var(--green);
+  margin-bottom: 22px;
+}
+.form-card {
+  background: var(--card);
+  border: 1px solid #163016;
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 440px;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border: 1px solid #1a3a1a;
+  border-radius: 10px;
+  color: #00c97a;
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  transition: 0.25s;
+}
+.buy-btn:hover {
+  background: #00ff9d15;
+  border-color: #00ff9d;
+  color: #00ff9d;
+}
+
+/* ===== Contact Page (Clean Version) ===== */
+.contact-list {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  border: 1px solid #1a3a1a;
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--green);
+  background: #0c1c0c;
+  transform: translateX(6px);
+  box-shadow: 0 0 20px #00ff9d22;
+}
+
+.contact-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.92rem;
+  color: var(--green);
+  letter-spacing: 0.5px;
+}
+
+.contact-arrow {
+  color: var(--muted);
+  font-size: 1.1rem;
+  transition: 0.25s;
+}
+
+.contact-item:hover .contact-arrow {
+  color: var(--green);
+  transform: translateX(4px);
+}
+
+/* ===== FORCE MOBILE BEHAVIOR ON ALL SCREEN SIZES ===== */
+
+/* Top Brand - always centered */
+.top-brand {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00ff9d;
+  letter-spacing: 2.5px;
+  padding: 9px 22px;
+  text-shadow: 0 0 12px #00ff9d88;
+  border: 1px solid #00ff9d44;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #0a1a0a, #061006);
+  box-shadow: 
+    0 0 15px #00ff9d22,
+    inset 0 0 12px #00ff9d11;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity 0.25s ease;
+}
+
+/* Glowing snake */
+.top-brand::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, transparent, #00ff9d, transparent, #00ff9d, transparent);
+  background-size: 300% 100%;
+  z-index: -1;
+  animation: snakeGlow 4s linear infinite;
+  opacity: 0.7;
+}
+
+.top-brand::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 7px;
+  background: #061006;
+  z-index: -1;
+}
+
+@keyframes snakeGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* Hide top brand when drawer is open */
+.sidebar.open ~ .top-brand,
+body:has(.sidebar.open) .top-brand {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== DRAWER BUTTON - ALWAYS VISIBLE ===== */
+.menu-btn {
+  position: absolute !important;
+  left: 16px;
+  top: 12px;
+  z-index: 110 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #0a1a0a;
+  border: 1px solid #1a3a1a;
+  color: #00ff9d;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ===== SIDEBAR - ALWAYS HIDDEN BY DEFAULT (EVEN ON DESKTOP) ===== */
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background: #061006;
+  border-right: 1px solid #163016;
+  padding: 70px 12px 20px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 90;
+  transform: translateX(-100%) !important;   /* force hidden */
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0) !important;       /* only show when opened */
+}
+
+/* Sidebar brand (right of button) */
+.sidebar-brand {
+  position: absolute;
+  top: 15px;
+  left: 62px;
+  z-index: 25;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00ff9d;
+  letter-spacing: 1.5px;
+  padding: 7px 14px;
+  white-space: nowrap;
+
+  text-shadow: 0 0 10px #00ff9d88;
+  border: 1px solid #00ff9d44;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #0a1a0a, #061006);
+  box-shadow: 0 0 12px #00ff9d22, inset 0 0 8px #00ff9d11;
+  overflow: hidden;
+}
+
+.sidebar-brand::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 9px;
+  background: linear-gradient(90deg, transparent, #00ff9d, transparent, #00ff9d, transparent);
+  background-size: 300% 100%;
+  z-index: -1;
+  animation: snakeGlow 4s linear infinite;
+  opacity: 0.65;
+}
+
+.sidebar-brand::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 6px;
+  background: #061006;
+  z-index: -1;
+}
+
+/* Give space at the top so content doesn't go under the brand */
+.main-content {
+  padding-top: 80px !important;
+}
+
+/* On very large screens keep the same spacing */
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 85px !important;
+  }
+}
