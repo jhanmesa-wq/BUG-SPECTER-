@@ -1,0 +1,6 @@
+{
+    "al3": { "label": "xstress", "kind": "android" },
+  "il1": { "label": "Richxios", "kind": "iphone" },
+  "il2": { "label": "Richxiosv2", "kind": "iphone" },
+  "gl1": { "label": "Crashclick", "kind": "group" }
+}
