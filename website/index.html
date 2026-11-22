@@ -3,43 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xeon Bvg VIP</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <title>SPECTER VIP - login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,-apple-system,sans-serif}
+    body{background:#0a0a0a;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+    body::before{content:"";position:fixed;inset:0;background:radial-gradient(600px 300px at 50% 0%, rgba(255,102,0,.18), transparent 70%);pointer-events:none}
+    .card{position:relative;background:#111111;width:100%;max-width:400px;border-radius:18px;padding:32px 32px 28px;box-shadow:0 20px 50px rgba(0,0,0,.6);border:1px solid #262626}
+    .card::before{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;background:linear-gradient(90deg,#ff6600,#ff8c00,#ff6600);border-radius:0 0 10px 10px}
+    .logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+    .logo-icon{width:46px;height:46px;background:#ff6600;color:#fff;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:21px;box-shadow:0 8px 20px rgba(255,102,0,.35)}
+    .logo-text h1{font-size:19px;line-height:1.1;letter-spacing:-.02em;color:#fff}
+    .logo-text p{font-size:12px;color:#ff8c00;margin-top:2px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+    h2{font-size:24px;letter-spacing:-.02em;margin-bottom:6px;color:#fff}
+    .desc{font-size:14px;color:#a1a1aa;line-height:1.5;margin-bottom:24px}
+    label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:#d4d4d8}
+    input{width:100%;padding:13px 14px;border:1px solid #2e2e2e;border-radius:11px;font-size:14px;outline:none;transition:.2s;background:#1a1a1a;color:#fff;margin-bottom:16px}
+    input::placeholder{color:#71717a}
+    input:focus{border-color:#ff6600;box-shadow:0 0 0 3px rgba(255,102,0,.18);background:#1a1a1a}
+    .row{display:flex;justify-content:space-between;align-items:center;margin:-6px 0 18px;font-size:13px}
+    .row label{margin:0;font-weight:400;display:flex;gap:6px;align-items:center;color:#a1a1aa}
+    .row input{width:auto;margin:0;accent-color:#ff6600}
+    .row a{color:#ff8c00;text-decoration:none;font-weight:600}
+    .btn{width:100%;padding:14px;border:none;border-radius:11px;background:#ff6600;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;box-shadow:0 10px 25px rgba(255,102,0,.3)}
+    .btn:hover{background:#ff7a1a;transform:translateY(-1px)}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:#71717a;font-size:12px}
+    .divider:before,.divider:after{content:"";flex:1;height:1px;background:#262626}
+    .buy{display:block;text-align:center;padding:13px;border:1px solid #333;border-radius:11px;text-decoration:none;color:#fff;font-size:14px;font-weight:600;background:#1a1a1a}
+    .buy:hover{border-color:#ff6600;color:#ff8c00}
+    .buy span{color:#ff6600}
+    .footer{margin-top:22px;text-align:center;font-size:12px;color:#525252}
+    #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:#ff6600;color:#fff;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 10px 20px rgba(0,0,0,.4);z-index:10}
+    #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    #toast.error{background:#dc2626}
+  </style>
 </head>
 <body>
 
-  <div class="login-wrapper">
-    <div class="login-card">
-      <div class="logo">Xeon Bvg VIP</div>
-      <div class="subtitle">GET REVENGE ON YOUR ENEMY</div>
-
-      <div class="input-group">
-        <label>USERNAME</label>
-        <input type="text" id="username" placeholder="Enter username" autocomplete="off">
-      </div>
-
-      <div class="input-group">
-        <label>PASSWORD</label>
-        <input type="password" id="password" placeholder="Enter password">
-      </div>
-
-      <button class="btn btn-primary" onclick="doLogin()">LOGIN</button>
-
-      <div style="margin-top: 16px; text-align: center;">
-        <a href="https://t.me/dreamguyxeon_1E" target="_blank" 
-           style="display: inline-block; padding: 10px 24px; border: 1px solid #1a3a1a; border-radius: 10px; 
-                  color: #00c97a; text-decoration: none; font-size: 0.82rem; letter-spacing: 1px;
-                  transition: 0.25s;">
-          BUY ACCESS
-        </a>
+  <div class="card">
+    <div class="logo-wrap">
+      <div class="logo-icon">X</div>
+      <div class="logo-text">
+        <h1>specter VIP</h1>
+        <p>USUARIOS VIP</p>
       </div>
     </div>
+
+    <h2>HOLA DE NUEVO</h2>
+    <p class="desc">inicia sesion para acceder al panel</p>
+
+    <label for="username">usuario</label>
+    <input type="text" id="username" placeholder="pon tu usuario" autocomplete="username">
+
+    <label for="password">contraseña</label>
+    <input type="password" id="password" placeholder="pon tu contraseña" autocomplete="current-password">
+
+    <div class="row">
+      <label><input type="checkbox" id="remember"> recordar contraseña</label>
+      <a href="#">Forgot password?</a>
+    </div>
+
+    <button class="btn" id="loginBtn" onclick="doLogin()">Sign in →</button>
+
+    <div class="divider">NO TIENES CUENTA?</div>
+
+    <a href="https://t.me/gatito_xxxxx" target="_blank" class="buy">BUY ACCESO <span>→</span></a>
+
+    <div class="footer">© 2026 specter VIP • Privacidad • Términos</div>
   </div>
 
-  <div id="toast" class="toast"></div>
+  <div id="toast"></div>
 
   <script src="js/app.js"></script>
-  <script src="js/occult-bg.js"></script>
 </body>
 </html>
