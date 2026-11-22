@@ -1,4 +1,4 @@
-.const global = {
+const global = {
     owner: [8271623149],
     botToken: "9009004191:AAHjBO2TSf4BTK3yykMQbPDDIak-Uy5mp4U",
     GROUP_ID: "-1003698813612",
