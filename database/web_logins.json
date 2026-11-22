@@ -1,0 +1,14 @@
+{ 
+  "ludznab": {
+    "password": "xLvYvZLujG",
+    "telegramId": 2051200890,
+    "createdBy": 2051200890,
+    "createdAt": "2026-11-19T20:17:49.553Z",
+    "expiry": null,
+    "revoked": false,
+    "maxUsers": 1,
+    "claimedIds": [
+      "0ace0f8eaa21d8ee007ace9378eb4cf7c6468060deb2b405"
+    ]
+  }
+}
