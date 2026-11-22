@@ -23,7 +23,7 @@ const global = {
     // === WEB + LOGGING ===
 LOG_GROUP_ID: -1004325456930,          // ← put your log group ID here
 WEB_JWT_SECRET: "XeonLoveSecretKeyChangeMe123!@#",  // change this to something strong
-WEB_DOMAIN: "",
+WEB_DOMAIN: "https://bug-specter.onrender.com",
 BUY_ACCESS_LINK: "https://t.me/YourDeveloperUsername",
 INSTAGRAM: "https://instagram.com/yourusername",
 YOUTUBE: "https://youtube.com/@yourchannel",
