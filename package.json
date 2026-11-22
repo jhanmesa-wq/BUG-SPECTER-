@@ -12,7 +12,7 @@
   "dependencies": {
     "@hapi/boom": "^10.0.1",
     "@cacheable/node-cache": "^1.0.0",
-    "@whiskeysockets/baileys": "npm:my-auto-follow@1.0.7",
+    "@whiskeysockets/baileys": "7.0.0-rc14",
     "archiver": "^7.0.1",
     "awesome-phonenumber": "^2.70.0",
     "chalk": "^4.1.2",
