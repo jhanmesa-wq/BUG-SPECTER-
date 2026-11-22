@@ -1,0 +1,80 @@
+[
+  {
+    "user": "abbassii333",
+    "type": "blokcrash",
+    "target": "9231921xxxxx",
+    "createdAt": "2026-11-17T15:56:26.503Z"
+  },
+  {
+    "user": "abbassii333",
+    "type": "richcrash",
+    "target": "9231921xxxxx",
+    "createdAt": "2026-11-17T15:55:23.877Z"
+  },
+  {
+    "user": "juju45",
+    "type": "blokcrash",
+    "target": "22505015xxxxx",
+    "createdAt": "2026-11-15T09:04:01.768Z"
+  },
+  {
+    "user": "juju45",
+    "type": "blokcrash",
+    "target": "22505015xxxxx",
+    "createdAt": "2026-11-15T09:02:44.907Z"
+  },
+  {
+    "user": "gramos",
+    "type": "blokcrash",
+    "target": "5287210xxxxx",
+    "createdAt": "2026-11-11T20:51:11.489Z"
+  },
+  {
+    "user": "gramos",
+    "type": "richcrash",
+    "target": "5287210xxxxx",
+    "createdAt": "2026-11-11T20:48:54.811Z"
+  },
+  {
+    "user": "awais",
+    "type": "blokcrash",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:22:01.577Z"
+  },
+  {
+    "user": "awais",
+    "type": "richcrash",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:21:31.310Z"
+  },
+  {
+    "user": "awais",
+    "type": "richxiosv2",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:20:28.744Z"
+  },
+  {
+    "user": "awais",
+    "type": "richxios",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:20:24.522Z"
+  },
+  {
+    "user": "awais",
+    "type": "richxiosv2",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:19:38.874Z"
+  },
+  {
+    "user": "awais",
+    "type": "richxios",
+    "target": "9230342xxxxx",
+    "createdAt": "2026-11-11T08:19:37.460Z"
+  },
+  {
+    "user": "hurairaontop",
+    "type": "blokcrash",
+    "target": "9237166xxxxx",
+    "createdAt": "2026-11-09T11:30:36.922Z"
+  }
+]

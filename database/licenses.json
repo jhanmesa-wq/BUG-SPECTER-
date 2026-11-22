@@ -1,0 +1,1241 @@
+{
+  "XEON-5F37A58D6EDA00EB358616429A4D74DE": {
+    "telegramId": 8552271400,
+    "expiry": "2053-10-15T10:36:51.550Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-05-31T10:36:51.550Z",
+    "activationDate": "2026-05-31T10:37:32.823Z"
+  },
+  "XEON-1B3CF8EEB24445660EF7C10FC710AFF0": {
+    "telegramId": 6224841993,
+    "expiry": "2053-10-15T13:30:56.766Z",
+    "hwid": "1cc01fa98919ecb56e5a389c96aa4c261229cf2cbea2dd90b0a388b9ed279c73",
+    "revoked": false,
+    "createdBy": 6224841993,
+    "createdAt": "2026-05-31T13:30:56.766Z",
+    "activationDate": "2026-06-01T17:53:56.821Z"
+  },
+  "XEON-4A9BEBE93F0371F889A9B23CB88F4155": {
+    "telegramId": 6678308025,
+    "expiry": "2053-10-16T10:59:04.279Z",
+    "hwid": "8493dbe7501b6c2c952ed12f40c88a477ca4d13fd7f16968adf54fc3a670dcc5",
+    "revoked": false,
+    "createdBy": 6678308025,
+    "createdAt": "2026-06-01T10:59:04.279Z",
+    "activationDate": "2026-06-01T11:32:45.682Z"
+  },
+  "XEON-9C4A19C63A032C64A9FE2354EF8B7D0E": {
+    "telegramId": 7302128104,
+    "expiry": "2053-10-16T11:00:57.947Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7302128104,
+    "createdAt": "2026-06-01T11:00:57.947Z"
+  },
+  "XEON-B6BB5A6332BB747C05D35B1A1A01E11C": {
+    "telegramId": 1930001517,
+    "expiry": "2053-10-16T11:04:54.496Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 1930001517,
+    "createdAt": "2026-06-01T11:04:54.497Z"
+  },
+  "XEON-93A7A683B10738501C838FC966FDE07A": {
+    "telegramId": 7615067790,
+    "expiry": "2053-10-16T11:05:02.157Z",
+    "hwid": "58c44e84c83553c3174d655ddd2263203ea0b8f8c70478f55e644afc7caf7a89",
+    "revoked": false,
+    "createdBy": 7615067790,
+    "createdAt": "2026-06-01T11:05:02.157Z",
+    "activationDate": "2026-06-01T11:13:49.561Z"
+  },
+  "XEON-856A755868908AD490CBD7D82017F12A": {
+    "telegramId": 7528755307,
+    "expiry": "2053-10-16T11:17:34.845Z",
+    "hwid": "16515da5d3c904e1482355f3a2ee2f9cf25d67b8c485a74427468bec5004ed16",
+    "revoked": false,
+    "createdBy": 7528755307,
+    "createdAt": "2026-06-01T11:17:34.845Z",
+    "activationDate": "2026-08-10T07:38:59.088Z"
+  },
+  "XEON-40DD3DD0789D785FFB58DAA22D07AF63": {
+    "telegramId": 6137655162,
+    "expiry": "2053-10-16T11:30:41.823Z",
+    "hwid": "6be46a6d1fa166bcada558c07817f44833fb2a4ac781c43ffd59ab2184e1acbb",
+    "revoked": false,
+    "createdBy": 6137655162,
+    "createdAt": "2026-06-01T11:30:41.823Z",
+    "activationDate": "2026-06-09T20:09:23.474Z"
+  },
+  "XEON-4B9A1312C6A997E5FB816E35DD58890D": {
+    "telegramId": 1382013152,
+    "expiry": "2053-10-16T11:48:43.621Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 1382013152,
+    "createdAt": "2026-06-01T11:48:43.621Z"
+  },
+  "XEON-9B519B4882AB59F2617869E79D49CD6F": {
+    "telegramId": 6341110642,
+    "expiry": "2053-10-16T11:54:33.779Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6341110642,
+    "createdAt": "2026-06-01T11:54:33.779Z"
+  },
+  "XEON-EEB46023FEFBF99147DB914259F98C83": {
+    "telegramId": 7300429473,
+    "expiry": "2053-10-16T12:22:01.302Z",
+    "hwid": "e5e4540da1bbd22f706dfc237b6d55351ea6b2215dfff4abf5244f5a6eab3a45",
+    "revoked": false,
+    "createdBy": 7300429473,
+    "createdAt": "2026-06-01T12:22:01.302Z",
+    "activationDate": "2026-06-01T12:59:17.517Z"
+  },
+  "XEON-36C970B5A154F97D45220F4E03FFCEF0": {
+    "telegramId": 8388423533,
+    "expiry": "2053-10-16T13:01:15.368Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8388423533,
+    "createdAt": "2026-06-01T13:01:15.368Z"
+  },
+  "XEON-49382F6437CF20ADAD4B83F8C649A236": {
+    "telegramId": 8552271400,
+    "expiry": "2053-10-16T13:13:21.918Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-06-01T13:13:21.918Z"
+  },
+  "XEON-26749331A61D48E7B685D79BBF1596C5": {
+    "telegramId": 8069290657,
+    "expiry": "2053-10-16T14:52:44.759Z",
+    "hwid": "58c44e84c83553c3174d655ddd2263203ea0b8f8c70478f55e644afc7caf7a89",
+    "revoked": false,
+    "createdBy": 8069290657,
+    "createdAt": "2026-06-01T14:52:44.759Z",
+    "activationDate": "2026-06-01T14:53:35.284Z"
+  },
+  "XEON-B7C4879312856F0954EDBE6D9CBEA174": {
+    "telegramId": 8753033179,
+    "expiry": "2053-10-16T16:49:43.550Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8753033179,
+    "createdAt": "2026-06-01T16:49:43.550Z"
+  },
+  "XEON-171A741BCDFB4C51A38B293FEAFAE053": {
+    "telegramId": 5952353018,
+    "expiry": "2053-10-16T17:23:07.949Z",
+    "hwid": "2ea9fc861cf9a9fa2e5450ce92301b37d86f80099b3747875bc6ea774ecce809",
+    "revoked": false,
+    "createdBy": 5952353018,
+    "createdAt": "2026-06-01T17:23:07.949Z",
+    "activationDate": "2026-06-04T12:16:42.733Z"
+  },
+  "XEON-D1E14CE5D51C09FEEFE695A944FCAD6B": {
+    "telegramId": 8535874878,
+    "expiry": "2053-10-16T17:52:49.163Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8535874878,
+    "createdAt": "2026-06-01T17:52:49.163Z"
+  },
+  "XEON-5A00078839E649B505B759D04E0364E5": {
+    "telegramId": 6386661023,
+    "expiry": "2053-10-16T19:42:48.092Z",
+    "hwid": "653c36f155f7b3d205f6b9af8c9d8b0539b76313d9de9f6d17cc5f5006249f9a",
+    "revoked": false,
+    "createdBy": 6386661023,
+    "createdAt": "2026-06-01T19:42:48.092Z",
+    "activationDate": "2026-06-01T19:54:17.055Z"
+  },
+  "XEON-B4F24077F4FC5E4B9CFF23F6425CA5D0": {
+    "telegramId": 7938146965,
+    "expiry": "2053-10-16T23:23:52.761Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7938146965,
+    "createdAt": "2026-06-01T23:23:52.761Z"
+  },
+  "XEON-821B5645E045C70CC4B9867F14101531": {
+    "telegramId": 1277877590,
+    "expiry": "2053-10-17T00:49:01.655Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 1277877590,
+    "createdAt": "2026-06-02T00:49:01.655Z"
+  },
+  "XEON-D016BDCC37189DC23B3D90808DBEFDFB": {
+    "telegramId": 6115699595,
+    "expiry": "2053-10-17T06:48:13.838Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6115699595,
+    "createdAt": "2026-06-02T06:48:13.838Z"
+  },
+  "XEON-10448109E17A2595C3C98ABF7AEB8238": {
+    "telegramId": 6964514297,
+    "expiry": "2053-10-17T07:03:46.567Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6964514297,
+    "createdAt": "2026-06-02T07:03:46.567Z"
+  },
+  "XEON-DF3783EE7C2E2BB7C581A6D3D3750B53": {
+    "telegramId": 5543064017,
+    "expiry": "2053-10-17T10:55:42.932Z",
+    "hwid": "10ccc5928b22e34c870c99fae5e12fe0e985bdb25f9f222fcb25fafdd7b8afc6",
+    "revoked": false,
+    "createdBy": 5543064017,
+    "createdAt": "2026-06-02T10:55:42.933Z",
+    "activationDate": "2026-06-03T05:16:37.556Z"
+  },
+  "XEON-2A369768BAD4C398DA3DD2DC7B3B220A": {
+    "telegramId": 6047013581,
+    "expiry": "2053-10-17T13:09:56.217Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6047013581,
+    "createdAt": "2026-06-02T13:09:56.217Z"
+  },
+  "XEON-C21E71474CA1C3EC0BB9C4D81DEAA255": {
+    "telegramId": 8474115139,
+    "expiry": "2053-10-17T19:31:42.314Z",
+    "hwid": "51f281a47a31d7b8f5c42285ae9c2345f5851ef2ff3d9770345f8e00fad8eee9",
+    "revoked": false,
+    "createdBy": 8474115139,
+    "createdAt": "2026-06-02T19:31:42.314Z",
+    "activationDate": "2026-06-02T19:37:28.836Z"
+  },
+  "XEON-9F8D0730F7F12FB5E32347F5F6418931": {
+    "telegramId": 8061324770,
+    "expiry": "2053-10-18T03:24:39.168Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8061324770,
+    "createdAt": "2026-06-03T03:24:39.168Z"
+  },
+  "XEON-C9743FA479FF64806868434BA9463E13": {
+    "telegramId": 7957651478,
+    "expiry": "2053-10-18T23:45:37.121Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7957651478,
+    "createdAt": "2026-06-03T23:45:37.121Z"
+  },
+  "XEON-6876CB6BCFCDDF189327A49AC29AE8B6": {
+    "telegramId": 6920774830,
+    "expiry": "2053-10-19T05:14:42.160Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6920774830,
+    "createdAt": "2026-06-04T05:14:42.160Z"
+  },
+  "XEON-85CD3B98380E40C56D1F908721CB55C0": {
+    "telegramId": 8266421709,
+    "expiry": "2053-10-20T15:22:59.998Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8266421709,
+    "createdAt": "2026-06-05T15:22:59.998Z"
+  },
+  "XEON-7A803AA01DA785CF822B9B091E7563F4": {
+    "telegramId": 5865400797,
+    "expiry": "2053-10-21T08:59:55.283Z",
+    "hwid": "5629b551d35df5feafa59186378f893ea614f75aec06e220c3b43b0bc1878fbb",
+    "revoked": false,
+    "createdBy": 5865400797,
+    "createdAt": "2026-06-06T08:59:55.283Z",
+    "activationDate": "2026-07-31T07:49:35.014Z"
+  },
+  "XEON-9B4FEBA9E3590BB7C93E2AB35DBF4400": {
+    "telegramId": 7510752284,
+    "expiry": "2053-10-21T11:05:47.969Z",
+    "hwid": "e15914e32c32f25e2652607fbb563aba7ca5be7ef7f70c9d34244e2179dae161",
+    "revoked": false,
+    "createdBy": 7510752284,
+    "createdAt": "2026-06-06T11:05:47.969Z",
+    "activationDate": "2026-06-06T11:06:46.806Z"
+  },
+  "XEON-D1D256E009C0491B28A1D5A86D149F55": {
+    "telegramId": 7905852965,
+    "expiry": "2053-10-23T20:52:59.314Z",
+    "hwid": "dae3dcc0a9136a56d374e0fb831bfd74732255001d5293ae1a690f151665182d",
+    "revoked": false,
+    "createdBy": 7905852965,
+    "createdAt": "2026-06-08T20:52:59.314Z",
+    "activationDate": "2026-06-08T21:31:08.755Z"
+  },
+  "XEON-F4EE48EEB087446ACCC7D12F4417F4CA": {
+    "telegramId": 7727904103,
+    "expiry": "2053-10-24T16:34:56.525Z",
+    "hwid": "b1a9c477c7f9c0758dc55e917d2477253ed7fe20af6ae827092a5b20db3aa6f8",
+    "revoked": false,
+    "createdBy": 7727904103,
+    "createdAt": "2026-06-09T16:34:56.525Z",
+    "activationDate": "2026-06-09T16:47:36.943Z"
+  },
+  "XEON-AC445AFF96C0F25484D01DC11A5CFC3D": {
+    "telegramId": 5532699390,
+    "expiry": "2053-10-25T11:10:38.340Z",
+    "hwid": "9c87cdc6ae00347dab1bcf3e3f6b489586de283d2ae1cf01c7887b052b23a5b7",
+    "revoked": false,
+    "createdBy": 5532699390,
+    "createdAt": "2026-06-10T11:10:38.340Z",
+    "activationDate": "2026-06-13T16:48:07.887Z"
+  },
+  "XEON-BA53688052E8DC917A7926DB9057BC33": {
+    "telegramId": 7627402655,
+    "expiry": "2053-10-25T15:52:52.563Z",
+    "hwid": "5e95d7dfb584359b1f38b425e26acf62b1e185269068fb0fc490a47476da702d",
+    "revoked": false,
+    "createdBy": 7627402655,
+    "createdAt": "2026-06-10T15:52:52.563Z",
+    "activationDate": "2026-08-03T19:27:56.195Z"
+  },
+  "XEON-DC6D0D1124ECE40E909C22C85E1F7305": {
+    "telegramId": 7854421455,
+    "expiry": "2053-10-26T01:56:24.207Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7854421455,
+    "createdAt": "2026-06-11T01:56:24.207Z"
+  },
+  "XEON-FAED88111DC8C5DF1120498616E63560": {
+    "telegramId": 7766085169,
+    "expiry": "2053-10-26T03:13:11.836Z",
+    "hwid": "98990729bc81c91b96ad202261a2a288003cf56e148ffb7828d822f919f8cee2",
+    "revoked": false,
+    "createdBy": 7766085169,
+    "createdAt": "2026-06-11T03:13:11.836Z",
+    "activationDate": "2026-06-11T03:18:36.829Z"
+  },
+  "XEON-A994EC2F399A0C4DDF515A2D638977DF": {
+    "telegramId": 7239639715,
+    "expiry": "2053-10-29T07:15:32.827Z",
+    "hwid": "653c36f155f7b3d205f6b9af8c9d8b0539b76313d9de9f6d17cc5f5006249f9a",
+    "revoked": false,
+    "createdBy": 7239639715,
+    "createdAt": "2026-06-14T07:15:32.827Z",
+    "activationDate": "2026-06-14T07:16:25.071Z"
+  },
+  "XEON-270345131A506D73FB4138042593CE4B": {
+    "telegramId": 8193517306,
+    "expiry": "2053-10-29T21:54:01.291Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8193517306,
+    "createdAt": "2026-06-14T21:54:01.291Z"
+  },
+  "XEON-9C14FB1785684E43E5E4AC1F1000A1BC": {
+    "telegramId": 701816050,
+    "expiry": "2053-10-29T22:36:48.146Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 701816050,
+    "createdAt": "2026-06-14T22:36:48.146Z"
+  },
+  "XEON-6E6B5442424450592BDE6D0A0E8F7AC4": {
+    "telegramId": 7343148533,
+    "expiry": "2053-10-30T01:59:50.410Z",
+    "hwid": "f6f9ceac2e0eac66c993d741756b44c8d93588ecc5e8bf1f04ac0c8145a46da5",
+    "revoked": false,
+    "createdBy": 7343148533,
+    "createdAt": "2026-06-15T01:59:50.410Z",
+    "activationDate": "2026-06-15T02:00:38.392Z"
+  },
+  "XEON-A4612AF06DB318649C176B5171F9A485": {
+    "telegramId": 6709968511,
+    "expiry": "2053-10-30T12:27:23.280Z",
+    "hwid": "531fd6058213c413a303332267fab09b354339f51af6dc762bea7c419d2668cc",
+    "revoked": false,
+    "createdBy": 6709968511,
+    "createdAt": "2026-06-15T12:27:23.280Z",
+    "activationDate": "2026-06-22T15:33:04.484Z"
+  },
+  "XEON-2267B6AE31B7C4D42A727ADFACCB08D3": {
+    "telegramId": 8086202215,
+    "expiry": "2053-10-30T15:11:49.287Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8086202215,
+    "createdAt": "2026-06-15T15:11:49.287Z"
+  },
+  "XEON-42FAF588243AB07729BE4CC263AEBB58": {
+    "telegramId": 7240038642,
+    "expiry": "2053-10-30T20:09:19.193Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7240038642,
+    "createdAt": "2026-06-15T20:09:19.194Z"
+  },
+  "XEON-A852BC52C3AB2360DAEC939CB9D42B68": {
+    "telegramId": 8657766164,
+    "expiry": "2053-10-31T18:20:05.097Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8657766164,
+    "createdAt": "2026-06-16T18:20:05.097Z"
+  },
+  "XEON-D8921E0035C68D6B38CD7E194A33155E": {
+    "telegramId": 1489872288,
+    "expiry": "2053-11-05T01:00:07.706Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 1489872288,
+    "createdAt": "2026-06-21T01:00:07.706Z"
+  },
+  "XEON-3C3513F7A6DAFD63A4620BF8BC0DC420": {
+    "telegramId": 5311573752,
+    "expiry": "2053-11-06T05:38:49.938Z",
+    "hwid": "9f0d57be4dce481a886fda276dfbcb5dabe62fd4377014eb7816b55d5c697e4e",
+    "revoked": false,
+    "createdBy": 5311573752,
+    "createdAt": "2026-06-22T05:38:49.938Z",
+    "activationDate": "2026-07-19T04:31:10.757Z"
+  },
+  "XEON-5BEA3829719B64B68B00A2A3512677B1": {
+    "telegramId": 8596438058,
+    "expiry": "2053-11-08T02:51:57.226Z",
+    "hwid": "21ab5d34188a1b3d2cb49f1c2179c9aacf2feaacd80442c5f3da76d3b414ce28",
+    "revoked": false,
+    "createdBy": 8596438058,
+    "createdAt": "2026-06-24T02:51:57.226Z",
+    "activationDate": "2026-06-24T03:05:34.934Z"
+  },
+  "XEON-2DAED8D73191059C6E58DF850E59AB91": {
+    "telegramId": 6541701591,
+    "expiry": "2053-11-09T04:49:22.692Z",
+    "hwid": "8ec03a16ba95778f5da23ef59f6a5c4b16c7957df6fbd7b6ab7f6c4846f6795b",
+    "revoked": false,
+    "createdBy": 6541701591,
+    "createdAt": "2026-06-25T04:49:22.692Z",
+    "activationDate": "2026-07-06T20:19:11.315Z"
+  },
+  "XEON-C478654CD62B9D235BE5F7D86FC12CC8": {
+    "telegramId": 7712340649,
+    "expiry": "2053-11-10T15:34:33.446Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7712340649,
+    "createdAt": "2026-06-26T15:34:33.446Z"
+  },
+  "XEON-063AE0BF94EC9FDFC102E65738F255BA": {
+    "telegramId": 6090858055,
+    "expiry": "2053-11-14T05:00:01.973Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6090858055,
+    "createdAt": "2026-06-30T05:00:01.973Z"
+  },
+  "XEON-BDF8614DB168E91C0DC35E5F8E5F502D": {
+    "telegramId": 8411085656,
+    "expiry": "2053-11-14T16:11:56.407Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8411085656,
+    "createdAt": "2026-06-30T16:11:56.407Z"
+  },
+  "XEON-D9127084BFC3F877A995F46E1824500E": {
+    "telegramId": 5478442446,
+    "expiry": "2053-11-19T12:07:18.656Z",
+    "hwid": "51e20770382ae65b4701514bc99f505971147b29d9ebe72796aa28651d7f69c1",
+    "revoked": false,
+    "createdBy": 5478442446,
+    "createdAt": "2026-07-05T12:07:18.656Z",
+    "activationDate": "2026-07-05T12:08:29.017Z"
+  },
+  "XEON-D8111D93D7E6B33493FC99C8AA400D12": {
+    "telegramId": 8485664234,
+    "expiry": "2053-11-20T08:42:35.519Z",
+    "hwid": "8ec03a16ba95778f5da23ef59f6a5c4b16c7957df6fbd7b6ab7f6c4846f6795b",
+    "revoked": false,
+    "createdBy": 8485664234,
+    "createdAt": "2026-07-06T08:42:35.519Z",
+    "activationDate": "2026-07-06T08:43:53.622Z"
+  },
+  "XEON-1EB2AF0BC9E67CB3DAF6E8453A6BCE27": {
+    "telegramId": 6855324522,
+    "expiry": "2053-11-20T16:12:58.852Z",
+    "hwid": "8ec03a16ba95778f5da23ef59f6a5c4b16c7957df6fbd7b6ab7f6c4846f6795b",
+    "revoked": false,
+    "createdBy": 6855324522,
+    "createdAt": "2026-07-06T16:12:58.852Z",
+    "activationDate": "2026-07-06T16:50:07.334Z"
+  },
+  "XEON-2B461B73EF37DA67329AA9B1A71F15E5": {
+    "telegramId": 7264391497,
+    "expiry": "2053-11-21T06:21:41.726Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7264391497,
+    "createdAt": "2026-07-07T06:21:41.726Z"
+  },
+  "XEON-625EB6708507C2D9B16524E697ED047C": {
+    "telegramId": 5151143495,
+    "expiry": "2053-11-23T00:51:52.722Z",
+    "hwid": "ce37bbccfc9004cb5dd6efd9f12b1de28d8150ad1d3f29c574ce410422fba319",
+    "revoked": false,
+    "createdBy": 5151143495,
+    "createdAt": "2026-07-09T00:51:52.722Z",
+    "activationDate": "2026-07-09T00:53:56.828Z"
+  },
+  "XEON-776416C7E28DA155087EAE12A8C8170E": {
+    "telegramId": 8552271400,
+    "expiry": "2053-11-23T02:22:59.425Z",
+    "hwid": "ce37bbccfc9004cb5dd6efd9f12b1de28d8150ad1d3f29c574ce410422fba319",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-07-09T02:22:59.425Z",
+    "activationDate": "2026-07-09T02:23:42.504Z"
+  },
+  "XEON-ACEE115ECE6B3D2C51716BE9E7AEB45A": {
+    "telegramId": 7306928737,
+    "expiry": "2053-11-24T15:35:57.918Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7306928737,
+    "createdAt": "2026-07-10T15:35:57.918Z"
+  },
+  "XEON-9ADAC21E41A9CE23B010F76A99F146D1": {
+    "telegramId": 7584587633,
+    "expiry": "2053-11-25T13:33:53.871Z",
+    "hwid": "3ea59b6b8105dcb9e2f2d1a5f7e7b41e510c3135e8941b63c2d4437ad4f0c434",
+    "revoked": false,
+    "createdBy": 7584587633,
+    "createdAt": "2026-07-11T13:33:53.872Z",
+    "activationDate": "2026-07-11T13:36:07.737Z"
+  },
+  "XEON-BA36C18681AEDC5ADFA3C328222ABD35": {
+    "telegramId": 7606566186,
+    "expiry": "2053-11-26T01:48:14.899Z",
+    "hwid": "28ef8d6d8ac895f0b1a4a5771f3cd8c9e95e57474d85c69ac03598d333c0b9d0",
+    "revoked": false,
+    "createdBy": 7606566186,
+    "createdAt": "2026-07-12T01:48:14.899Z",
+    "activationDate": "2026-07-12T01:50:06.436Z"
+  },
+  "XEON-8150775918038E9A27B01E43484FA5EA": {
+    "telegramId": 6152029368,
+    "expiry": "2053-11-28T05:10:33.535Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6152029368,
+    "createdAt": "2026-07-14T05:10:33.535Z"
+  },
+  "XEON-0B2CC3D32CA65C4DB40D946D843C7A5A": {
+    "telegramId": 8369005807,
+    "expiry": "2053-11-30T03:57:34.640Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8369005807,
+    "createdAt": "2026-07-16T03:57:34.640Z"
+  },
+  "XEON-16C8B51349A0ACEA86C62ADDE8125B0E": {
+    "telegramId": 8010386645,
+    "expiry": "2053-12-01T05:41:06.306Z",
+    "hwid": "fd2ab3f22b6fa73449dc6f0fda4b8d001a15f8d1357f4a1e3ec110325ffbcb45",
+    "revoked": false,
+    "createdBy": 8010386645,
+    "createdAt": "2026-07-17T05:41:06.306Z",
+    "activationDate": "2026-07-17T05:42:17.117Z"
+  },
+  "XEON-75A5515CB84B7AE025BB53F80358019E": {
+    "telegramId": 8026675380,
+    "expiry": "2053-12-05T05:05:30.101Z",
+    "hwid": "105bf46f86c6f39ba03f4a76fc260268920623b50e32cb742069e103ea1783f6",
+    "revoked": false,
+    "createdBy": 8026675380,
+    "createdAt": "2026-07-21T05:05:30.101Z",
+    "activationDate": "2026-07-21T05:05:48.360Z"
+  },
+  "XEON-0837A1A0EF7D79DE83C553A79B907CC4": {
+    "telegramId": 8552271400,
+    "expiry": "2053-12-07T16:39:27.106Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-07-23T16:39:27.107Z",
+    "activationDate": "2026-07-23T16:40:05.723Z"
+  },
+  "XEON-F231B7257775133309C09D14EEBA763E": {
+    "telegramId": 7872365879,
+    "expiry": "2053-12-07T21:54:43.459Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7872365879,
+    "createdAt": "2026-07-23T21:54:43.459Z"
+  },
+  "XEON-639995A26C6405669B5C4AD9219C2E65": {
+    "telegramId": 8552271400,
+    "expiry": "2053-12-08T01:05:03.002Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-07-24T01:05:03.002Z",
+    "activationDate": "2026-07-24T01:05:30.844Z"
+  },
+  "XEON-2CF4C95149D2B9EE89B54B0A4F2A4A28": {
+    "telegramId": 7524082704,
+    "expiry": "2053-12-09T07:08:22.005Z",
+    "hwid": "653c36f155f7b3d205f6b9af8c9d8b0539b76313d9de9f6d17cc5f5006249f9a",
+    "revoked": false,
+    "createdBy": 7524082704,
+    "createdAt": "2026-07-25T07:08:22.005Z",
+    "activationDate": "2026-07-31T10:38:07.393Z"
+  },
+  "XEON-180BCBFBD58EF2648101C68FF333C8BB": {
+    "telegramId": 7545337819,
+    "expiry": "2053-12-09T10:50:33.055Z",
+    "hwid": "fd2ab3f22b6fa73449dc6f0fda4b8d001a15f8d1357f4a1e3ec110325ffbcb45",
+    "revoked": false,
+    "createdBy": 7545337819,
+    "createdAt": "2026-07-25T10:50:33.055Z",
+    "activationDate": "2026-07-29T11:48:48.316Z"
+  },
+  "XEON-696967545E0821EE1DDEA389CB0A4E62": {
+    "telegramId": 8552271400,
+    "expiry": "2053-12-09T11:14:27.454Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-07-25T11:14:27.454Z",
+    "activationDate": "2026-07-25T11:15:36.239Z"
+  },
+  "XEON-91C1FA6643E1522DA24DC82949720B12": {
+    "telegramId": 8552271400,
+    "expiry": "2053-12-09T13:04:22.072Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-07-25T13:04:22.072Z",
+    "activationDate": "2026-07-25T13:07:09.181Z"
+  },
+  "XEON-3161E25657708FE7A7FADF67DF198DEB": {
+    "telegramId": 8503775250,
+    "expiry": "2053-12-09T18:14:26.394Z",
+    "hwid": "50668322958f7c875caab557e2d97a1a96cc8b620124a4ce0abbea7eee65544b",
+    "revoked": false,
+    "createdBy": 8503775250,
+    "createdAt": "2026-07-25T18:14:26.394Z",
+    "activationDate": "2026-07-25T18:23:25.521Z"
+  },
+  "XEON-9B926C04443538721C5D3B9DE53694E9": {
+    "telegramId": 8534906100,
+    "expiry": "2053-12-09T21:46:38.615Z",
+    "hwid": "e3d5d9d62e32eade12ccc927a02ac093133819270bbb04e7651246ff08d36919",
+    "revoked": false,
+    "createdBy": 8534906100,
+    "createdAt": "2026-07-25T21:46:38.615Z",
+    "activationDate": "2026-07-25T21:48:31.661Z"
+  },
+  "XEON-1D99A3EA5CACADFE5C2DCB5F91FC89A6": {
+    "telegramId": 7561880907,
+    "expiry": "2053-12-10T17:55:51.156Z",
+    "hwid": "fd2ab3f22b6fa73449dc6f0fda4b8d001a15f8d1357f4a1e3ec110325ffbcb45",
+    "revoked": false,
+    "createdBy": 7561880907,
+    "createdAt": "2026-07-26T17:55:51.156Z",
+    "activationDate": "2026-07-26T18:46:22.831Z"
+  },
+  "XEON-D2C20CA733AD1793A83FAEDA5034B288": {
+    "telegramId": 7343787360,
+    "expiry": "2053-12-10T18:47:14.769Z",
+    "hwid": "39870783dc6b8961f833ae9fc4e5b0d1cc18bd564a937bbffc8810972360aeb1",
+    "revoked": false,
+    "createdBy": 7343787360,
+    "createdAt": "2026-07-26T18:47:14.769Z",
+    "activationDate": "2026-07-26T18:48:08.875Z"
+  },
+  "XEON-AF3D7CA7426C376DC6F7726BF1D590F2": {
+    "telegramId": 1850403226,
+    "expiry": "2053-12-10T19:03:44.364Z",
+    "hwid": "63e3befb671ea6644e961fa5bd199020abe3af163a1feb71c5281b1bfa00e4ac",
+    "revoked": false,
+    "createdBy": 1850403226,
+    "createdAt": "2026-07-26T19:03:44.364Z",
+    "activationDate": "2026-07-26T19:06:03.873Z"
+  },
+  "XEON-6673A8B2F3EC606BE100CEF17B35BEFD": {
+    "telegramId": 8430560136,
+    "expiry": "2053-12-11T03:51:32.120Z",
+    "hwid": "300df7366323d224ba07c1ca16fb28987604c48969a78083779968bd2efbbb65",
+    "revoked": false,
+    "createdBy": 8430560136,
+    "createdAt": "2026-07-27T03:51:32.120Z",
+    "activationDate": "2026-07-29T01:21:14.226Z"
+  },
+  "XEON-F4009C8502A30B8CF7BB5FFA46CFF65E": {
+    "telegramId": 8052704951,
+    "expiry": "2053-12-11T17:27:21.990Z",
+    "hwid": "a3f83881fc78ac9798fc550c3ae4d2e9a0f2707797c6e00060e6a01c70a02a59",
+    "revoked": false,
+    "createdBy": 8052704951,
+    "createdAt": "2026-07-27T17:27:21.990Z",
+    "activationDate": "2026-08-27T00:18:17.144Z"
+  },
+  "XEON-23B694FB4FF74965E65A3CC8307244E9": {
+    "telegramId": 6543767344,
+    "expiry": "2053-12-12T05:10:27.224Z",
+    "hwid": "20ea74621fd5af725b67f40392fe88a71a5d49d712794673ec06ddbd7785d9fe",
+    "revoked": false,
+    "createdBy": 6543767344,
+    "createdAt": "2026-07-28T05:10:27.224Z",
+    "activationDate": "2026-07-28T05:11:41.716Z"
+  },
+  "XEON-433D7927CFC47107E9DC1FAA432274AB": {
+    "telegramId": 8155743258,
+    "expiry": "2053-12-12T14:07:41.475Z",
+    "hwid": "fb9e7ba5fd838a9a7dd3cc768bdd9ad3728d7cdccb091374266df55c6c3cca29",
+    "revoked": false,
+    "createdBy": 8155743258,
+    "createdAt": "2026-07-28T14:07:41.475Z",
+    "activationDate": "2026-07-28T14:31:09.658Z"
+  },
+  "XEON-A61703A478FFE2299C68C7281BF2803C": {
+    "telegramId": 5174847850,
+    "expiry": "2053-12-12T14:49:06.331Z",
+    "hwid": "300df7366323d224ba07c1ca16fb28987604c48969a78083779968bd2efbbb65",
+    "revoked": false,
+    "createdBy": 5174847850,
+    "createdAt": "2026-07-28T14:49:06.331Z",
+    "activationDate": "2026-07-28T15:35:06.157Z"
+  },
+  "XEON-81485DFF167F25297EE859E67D1E9BE0": {
+    "telegramId": 6516704660,
+    "expiry": "2053-12-13T00:41:05.371Z",
+    "hwid": "c5a121b38d1d7e3ec82457a018c918ef543e230355e126dbd840194500022634",
+    "revoked": false,
+    "createdBy": 6516704660,
+    "createdAt": "2026-07-29T00:41:05.371Z",
+    "activationDate": "2026-07-29T00:41:29.417Z"
+  },
+  "XEON-B99604CC323B8B3939CD2C5B7EF41508": {
+    "telegramId": 1966687060,
+    "expiry": "2053-12-13T01:11:34.946Z",
+    "hwid": "446118811864eb481d1e69d8d9b74490122545f23d9ff2cc817f7898b35380c6",
+    "revoked": false,
+    "createdBy": 1966687060,
+    "createdAt": "2026-07-29T01:11:34.946Z",
+    "activationDate": "2026-07-29T01:21:23.508Z"
+  },
+  "XEON-301F6914DE3671D44E9D4DB6286E2C94": {
+    "telegramId": 7471842606,
+    "expiry": "2053-12-13T17:45:21.409Z",
+    "hwid": "d1188bfb37316319b7256f1797dbeb2e869f2471f46a1614dfca4c5f0f677239",
+    "revoked": false,
+    "createdBy": 7471842606,
+    "createdAt": "2026-07-29T17:45:21.409Z",
+    "activationDate": "2026-07-29T17:47:27.833Z"
+  },
+  "XEON-2375DB058FEA4AC0DDA90E2D0CF9C169": {
+    "telegramId": 1472278127,
+    "expiry": "2053-12-13T20:01:56.395Z",
+    "hwid": "4f9da1e304fb44f9afb71c8a1a96d30bf5bcdcbf8bf8e9ac397c181827821480",
+    "revoked": false,
+    "createdBy": 1472278127,
+    "createdAt": "2026-07-29T20:01:56.395Z",
+    "activationDate": "2026-08-02T18:22:53.540Z"
+  },
+  "XEON-38515E8E49B35CF4E212629E5C7D90DC": {
+    "telegramId": 7976873549,
+    "expiry": "2053-12-14T00:41:03.411Z",
+    "hwid": "efb18613eb015f38cf9b081d14241fd1fbdc49405cef23110845742825a7cc11",
+    "revoked": false,
+    "createdBy": 7976873549,
+    "createdAt": "2026-07-30T00:41:03.411Z",
+    "activationDate": "2026-07-30T00:57:49.177Z"
+  },
+  "XEON-061FFB51C742D45ADFF11DBA16F3C12E": {
+    "telegramId": 8862311171,
+    "expiry": "2053-12-15T03:24:02.351Z",
+    "hwid": "b646b5326c8c1f6ccb011b9848415169636fc03be4dd01f88248a332f31e2f1c",
+    "revoked": false,
+    "createdBy": 8862311171,
+    "createdAt": "2026-07-31T03:24:02.351Z",
+    "activationDate": "2026-07-31T03:30:59.972Z"
+  },
+  "XEON-49C3759D9823B9BE6BA8D7C996D7B3C7": {
+    "telegramId": 7412190448,
+    "expiry": "2053-12-16T00:33:45.064Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7412190448,
+    "createdAt": "2026-08-01T00:33:45.064Z"
+  },
+  "XEON-32BDE59B1E7A3D8D2241FF34F32A0D8C": {
+    "telegramId": 1582862279,
+    "expiry": "2053-12-16T12:52:28.247Z",
+    "hwid": "24f93cc03c86b25e41edfbe9648354aa68679a9ab00840fa73d180b616e073a5",
+    "revoked": false,
+    "createdBy": 1582862279,
+    "createdAt": "2026-08-01T12:52:28.247Z",
+    "activationDate": "2026-08-01T12:56:07.016Z"
+  },
+  "XEON-E78E07F99EF636E34561B4614D225B6D": {
+    "telegramId": 1787132282,
+    "expiry": "2053-12-18T02:42:52.690Z",
+    "hwid": "ba2ea5f3abc124862d43e9f2c59e1ae721732f08650933aa69d00e9f3ee43c1d",
+    "revoked": false,
+    "createdBy": 1787132282,
+    "createdAt": "2026-08-03T02:42:52.690Z",
+    "activationDate": "2026-08-03T02:46:06.589Z"
+  },
+  "XEON-CC6CA45E3F95D0B72B3DA4C21C0E0678": {
+    "telegramId": 7042421918,
+    "expiry": "2053-12-18T04:36:04.336Z",
+    "hwid": "7eaf89720a244e34da4c49bebc76229f791b040904a28d78617ee7cb3bfb0614",
+    "revoked": false,
+    "createdBy": 7042421918,
+    "createdAt": "2026-08-03T04:36:04.336Z",
+    "activationDate": "2026-08-03T05:21:03.431Z"
+  },
+  "XEON-0DBA1FE8E71A0B5C05E92F2E5CB34357": {
+    "telegramId": 6248150976,
+    "expiry": "2053-12-18T12:13:20.058Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6248150976,
+    "createdAt": "2026-08-03T12:13:20.058Z"
+  },
+  "XEON-5FFC298DEEEEC00AB2A4FCB6BDD182F1": {
+    "telegramId": 6742236994,
+    "expiry": "2053-12-19T02:04:58.170Z",
+    "hwid": "7074b44df1a90dec08d502a23a7869e83ee1f369775448b04e7aa968fe4b7171",
+    "revoked": false,
+    "createdBy": 6742236994,
+    "createdAt": "2026-08-04T02:04:58.170Z",
+    "activationDate": "2026-08-04T02:07:11.049Z"
+  },
+  "XEON-AAF2E17BBBB1196447486E7B3311BD2F": {
+    "telegramId": 625302905,
+    "expiry": "2053-12-19T02:48:59.645Z",
+    "hwid": "8c9e7d502247f6cd25f2dfde2e868df3dbdbbe30059c3cd92d6449cc209ef385",
+    "revoked": false,
+    "createdBy": 625302905,
+    "createdAt": "2026-08-04T02:48:59.645Z",
+    "activationDate": "2026-08-04T02:52:22.329Z"
+  },
+  "XEON-BF9AF08E3C89282C6526CE6F79E23C8D": {
+    "telegramId": 7892596832,
+    "expiry": "2053-12-19T18:35:58.166Z",
+    "hwid": "9fa0adfe32385feca9d0a0bf373c7e926f33bc57656d2438c79bb51fb55c8836",
+    "revoked": false,
+    "createdBy": 7892596832,
+    "createdAt": "2026-08-04T18:35:58.166Z",
+    "activationDate": "2026-08-04T18:43:34.957Z"
+  },
+  "XEON-C04E0ABC7F24EE35891C180B4F079FAC": {
+    "telegramId": 8004679242,
+    "expiry": "2053-12-20T07:52:44.435Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8004679242,
+    "createdAt": "2026-08-05T07:52:44.435Z"
+  },
+  "XEON-F7AAABC657DCEC1BE9C5462F66D23CCE": {
+    "telegramId": 5663992508,
+    "expiry": "2053-12-21T16:08:16.896Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 5663992508,
+    "createdAt": "2026-08-06T16:08:16.896Z"
+  },
+  "XEON-BEEC5CAF6D3F8459728979967FCAB7F0": {
+    "telegramId": 7083041219,
+    "expiry": "2053-12-22T19:16:39.903Z",
+    "hwid": "8cd3e5f16ad040f7aceec6b846c7adc5cc3354f31464c795c1a0e56ea1df6048",
+    "revoked": false,
+    "createdBy": 7083041219,
+    "createdAt": "2026-08-07T19:16:39.903Z",
+    "activationDate": "2026-08-07T19:19:14.751Z"
+  },
+  "XEON-F9C03C1762B1D9EB81AF751859D01F32": {
+    "telegramId": 1864770630,
+    "expiry": "2053-12-25T08:00:40.024Z",
+    "hwid": "eeac333b266bd8fd4c9f9fe5224fc618060fde59341447e6dbc9d977cfacb5a0",
+    "revoked": false,
+    "createdBy": 1864770630,
+    "createdAt": "2026-08-10T08:00:40.024Z",
+    "activationDate": "2026-08-10T08:03:55.106Z"
+  },
+  "XEON-651FE7C1F6A48069EE57C21E393C53A1": {
+    "telegramId": 7369655327,
+    "expiry": "2053-12-25T12:32:02.885Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7369655327,
+    "createdAt": "2026-08-10T12:32:02.885Z"
+  },
+  "XEON-0286BD388885E51A2164E8008A83F1FC": {
+    "telegramId": 7827640792,
+    "expiry": "2053-12-27T22:19:46.401Z",
+    "hwid": "7906b4bdba50bc5c227f8a63d454e4b80e1f90a29d2bcae21c77306f7d315f6b",
+    "revoked": false,
+    "createdBy": 7827640792,
+    "createdAt": "2026-08-12T22:19:46.401Z",
+    "activationDate": "2026-08-12T22:26:57.733Z"
+  },
+  "XEON-1287091851C096D02EF4CD0E76D4D8CC": {
+    "telegramId": 8203260029,
+    "expiry": "2053-12-30T06:25:36.447Z",
+    "hwid": "baf8a01846bbab82ce838528f57480a4013781f46210be9e32dc14f5b73b1db2",
+    "revoked": false,
+    "createdBy": 8203260029,
+    "createdAt": "2026-08-15T06:25:36.447Z",
+    "activationDate": "2026-08-15T06:27:32.789Z"
+  },
+  "XEON-610E6F8E18793F9A04E4B97E6ED83BC9": {
+    "telegramId": 8098177452,
+    "expiry": "2054-01-03T04:01:18.007Z",
+    "hwid": "3eddce6b9e45c6c8a11b05e4d662649742ae11b641f209656854a414e5dc70ec",
+    "revoked": false,
+    "createdBy": 8098177452,
+    "createdAt": "2026-08-19T04:01:18.007Z",
+    "activationDate": "2026-08-19T04:03:14.039Z"
+  },
+  "XEON-A65F07E6CAFD18ABA2EC7E684291BDC7": {
+    "telegramId": 6603462051,
+    "expiry": "2054-01-03T18:58:43.818Z",
+    "hwid": "c1bc0ac658e12758d0bf44d966fb5cfea294ac2c86264d4357db42c09d4fe3c5",
+    "revoked": false,
+    "createdBy": 6603462051,
+    "createdAt": "2026-08-19T18:58:43.818Z",
+    "activationDate": "2026-08-19T19:00:28.229Z"
+  },
+  "XEON-8D2003F259BF85406D6CB13685C067D7": {
+    "telegramId": 7024522100,
+    "expiry": "2054-01-05T17:26:58.907Z",
+    "hwid": "826b8317b78e4261d728e36d0bdb2a2d4286af17374022112572ad641f5d21d4",
+    "revoked": false,
+    "createdBy": 7024522100,
+    "createdAt": "2026-08-21T17:26:58.907Z",
+    "activationDate": "2026-08-21T17:28:13.862Z"
+  },
+  "XEON-CD4C385D4F0FFBECBA7CB34079869B61": {
+    "telegramId": 7643869437,
+    "expiry": "2054-01-06T06:23:34.297Z",
+    "hwid": "ec2088a0c11a62243522028c85f449f4cbfae5de3805d01bbb2b2a05b8383375",
+    "revoked": false,
+    "createdBy": 7643869437,
+    "createdAt": "2026-08-22T06:23:34.297Z",
+    "activationDate": "2026-08-22T06:24:20.614Z"
+  },
+  "XEON-8652550C950FF32AC9292227F1CA1FDD": {
+    "telegramId": 6236501711,
+    "expiry": "2054-01-08T07:31:52.322Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6236501711,
+    "createdAt": "2026-08-24T07:31:52.322Z"
+  },
+  "XEON-098E2002387528B0707ECFB037E2ABAB": {
+    "telegramId": 6332944119,
+    "expiry": "2054-01-08T11:06:29.652Z",
+    "hwid": "c071b420cc6b8a4c4e771f01b58aa8620c7d5309e881c81182760e62cd007c91",
+    "revoked": false,
+    "createdBy": 6332944119,
+    "createdAt": "2026-08-24T11:06:29.652Z",
+    "activationDate": "2026-08-24T11:11:20.380Z"
+  },
+  "XEON-03DF8A9D7B3C5A82EE1D8F6C6DE0D94A": {
+    "telegramId": 8516699989,
+    "expiry": "2054-01-10T20:32:30.090Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8516699989,
+    "createdAt": "2026-08-26T20:32:30.091Z"
+  },
+  "XEON-59A121DB9D95F4D9DA1F01E99DF8774A": {
+    "telegramId": 6243959117,
+    "expiry": "2054-01-12T09:06:39.120Z",
+    "hwid": "a88ab03f6815ec714e224cbee59ecc15de410f72935f54280d5ffff3234f1d54",
+    "revoked": false,
+    "createdBy": 6243959117,
+    "createdAt": "2026-08-28T09:06:39.120Z",
+    "activationDate": "2026-08-28T09:08:00.234Z"
+  },
+  "XEON-5B50DA34B49F6688CD49E73D05A7F822": {
+    "telegramId": 8552271400,
+    "expiry": "2054-01-12T11:41:42.915Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-08-28T11:41:42.915Z",
+    "activationDate": "2026-08-28T11:49:36.471Z"
+  },
+  "XEON-FF8E05A75E0908470C6803EA4E3FC88C": {
+    "telegramId": 5495631002,
+    "expiry": "2054-01-12T13:27:34.060Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 5495631002,
+    "createdAt": "2026-08-28T13:27:34.060Z"
+  },
+  "XEON-4F9C085E842164BC755249AC2218B9D7": {
+    "telegramId": 7566223421,
+    "expiry": "2054-01-12T19:56:22.587Z",
+    "hwid": "f04be20637e8eeee2db21bc1064cf4f0227c31f0305321ebc81715ffe480dfe9",
+    "revoked": false,
+    "createdBy": 7566223421,
+    "createdAt": "2026-08-28T19:56:22.587Z",
+    "activationDate": "2026-08-28T19:57:16.296Z"
+  },
+  "XEON-F82C34BB88F7707A79F1F75170536752": {
+    "telegramId": 7688337621,
+    "expiry": "2054-01-13T05:45:13.728Z",
+    "hwid": "bbdd2b5e037ebdfd385ccee5143603024cdf2da8ae505629e3cd7fc1fe169027",
+    "revoked": false,
+    "createdBy": 7688337621,
+    "createdAt": "2026-08-29T05:45:13.728Z",
+    "activationDate": "2026-08-29T05:49:39.824Z"
+  },
+  "XEON-AC84A945CB02B838608C8030B4622D9A": {
+    "telegramId": 6179655327,
+    "expiry": "2054-01-16T23:31:51.796Z",
+    "hwid": "bf9a9f35d92c8fe6c0534bfdadec15cffed90bb396678ebc1add361321280d46",
+    "revoked": false,
+    "createdBy": 6179655327,
+    "createdAt": "2026-09-01T23:31:51.796Z",
+    "activationDate": "2026-09-01T23:32:15.830Z"
+  },
+  "XEON-5F1AC9501799C01006E139A82B1E172F": {
+    "telegramId": 5353756587,
+    "expiry": "2054-01-19T10:23:16.174Z",
+    "hwid": "a88ab03f6815ec714e224cbee59ecc15de410f72935f54280d5ffff3234f1d54",
+    "revoked": false,
+    "createdBy": 5353756587,
+    "createdAt": "2026-09-04T10:23:16.174Z",
+    "activationDate": "2026-09-06T22:08:55.174Z"
+  },
+  "XEON-637CAB98003A1FF63AAC9A404F4B59DE": {
+    "telegramId": 5636629456,
+    "expiry": "2054-01-24T11:36:21.135Z",
+    "hwid": "309f5060e6c7dda6228c1ecb3a43043579747cdc5748de0f90e83bbd52d42083",
+    "revoked": false,
+    "createdBy": 5636629456,
+    "createdAt": "2026-09-09T11:36:21.135Z",
+    "activationDate": "2026-09-09T11:42:36.922Z"
+  },
+  "XEON-613B31CDA536AF446269EBEB90A62677": {
+    "telegramId": 7444826087,
+    "expiry": "2054-01-25T16:04:09.579Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7444826087,
+    "createdAt": "2026-09-10T16:04:09.579Z"
+  },
+  "XEON-3AE424B1815AB4ABE92E208BF957B3D0": {
+    "telegramId": 8900415093,
+    "expiry": "2054-01-30T13:36:08.321Z",
+    "hwid": "2321ebaaf783866ba533b21cb84a61007df772d8c750b78b373ec82eaf7ef45b",
+    "revoked": false,
+    "createdBy": 8900415093,
+    "createdAt": "2026-09-15T13:36:08.321Z",
+    "activationDate": "2026-09-15T14:14:13.913Z"
+  },
+  "XEON-E00A7F1729880454DBC0381CD7FE45DC": {
+    "telegramId": 8799369867,
+    "expiry": "2054-02-01T04:09:59.378Z",
+    "hwid": "14ef835577545eb769f93e19e3c8de4bf84830df1c39b6dcb1c9ad1f57693bf9",
+    "revoked": false,
+    "createdBy": 8799369867,
+    "createdAt": "2026-09-17T04:09:59.378Z",
+    "activationDate": "2026-09-17T05:19:35.052Z"
+  },
+  "XEON-F99EE1FAE132B70C3B4FE88E4213A988": {
+    "telegramId": 2051200890,
+    "expiry": "2054-02-01T05:45:00.128Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 2051200890,
+    "createdAt": "2026-09-17T05:45:00.128Z"
+  },
+  "XEON-1C1FBF41D6A4679FDD0A760B89BC8D4A": {
+    "telegramId": 1338305134,
+    "expiry": "2054-02-04T09:38:51.431Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 1338305134,
+    "createdAt": "2026-09-20T09:38:51.431Z"
+  },
+  "XEON-28240FED1485AD2861A5318AE8513880": {
+    "telegramId": 7273708735,
+    "expiry": "2054-02-04T20:19:18.075Z",
+    "hwid": "9132be0882069e8d1708fb59ca7fa7a4016d8e86f40455773886bfb199424dc9",
+    "revoked": false,
+    "createdBy": 7273708735,
+    "createdAt": "2026-09-20T20:19:18.075Z",
+    "activationDate": "2026-09-20T20:22:39.997Z"
+  },
+  "XEON-1DCC9AE7FC7E2867687C520FD109FE1B": {
+    "telegramId": 8460997048,
+    "expiry": "2054-02-04T21:11:53.048Z",
+    "hwid": "0e60db69b9cbd1a458930831bb3a54124c990528c2509615d7f48ea97c2e3b1a",
+    "revoked": false,
+    "createdBy": 8460997048,
+    "createdAt": "2026-09-20T21:11:53.048Z",
+    "activationDate": "2026-09-20T21:12:53.358Z"
+  },
+  "XEON-AF911584C14D9FEBB572DF565C69A1E8": {
+    "telegramId": 8552271400,
+    "expiry": "2054-02-06T13:04:43.887Z",
+    "hwid": "d93fd56221f3d46d1fe4da2d5cbe33effc275093a45a0750abd324cde8f888ac",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-09-22T13:04:43.887Z",
+    "activationDate": "2026-09-22T13:06:53.553Z"
+  },
+  "XEON-707D53F2611FCE5B7A8C11CDD23B355B": {
+    "telegramId": 7963442150,
+    "expiry": "2054-02-07T20:32:02.605Z",
+    "hwid": "f673a1b98c9d2c564df13639db1b9f3fe22126d750c6424593e6c2455dfe2a73",
+    "revoked": false,
+    "createdBy": 7963442150,
+    "createdAt": "2026-09-23T20:32:02.605Z",
+    "activationDate": "2026-09-23T20:34:45.325Z"
+  },
+  "XEON-3D44CB5517B1E6BB7DEC8485B2D648C6": {
+    "telegramId": 8416373017,
+    "expiry": "2054-02-08T11:51:14.940Z",
+    "hwid": "1fb9c2522c3abaa7e6fa18b4483c2688eaeb4d9ed8d1cdf65e74e831f9b986b5",
+    "revoked": false,
+    "createdBy": 8416373017,
+    "createdAt": "2026-09-24T11:51:14.940Z",
+    "activationDate": "2026-09-24T11:52:39.772Z"
+  },
+  "XEON-2C537756E86CB2B3A13998A4FBF8FC67": {
+    "telegramId": 8402899447,
+    "expiry": "2054-02-09T18:30:50.329Z",
+    "hwid": "f882921214a508ad87f1ccbe152519117a19adf4e7063d1565439eb5897f9f2a",
+    "revoked": false,
+    "createdBy": 8402899447,
+    "createdAt": "2026-09-25T18:30:50.329Z",
+    "activationDate": "2026-09-26T04:58:19.440Z"
+  },
+  "XEON-56B6059918A1D68549AD725F876D0B76": {
+    "telegramId": 6920649570,
+    "expiry": "2054-02-12T17:12:52.975Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 6920649570,
+    "createdAt": "2026-09-28T17:12:52.975Z"
+  },
+  "XEON-B5390A76F307DE442AE80158F0F27B84": {
+    "telegramId": 8355569501,
+    "expiry": "2054-02-12T20:30:26.601Z",
+    "hwid": "20ab4c1d975761ac41695d525c7d8805745ec6a0c5bd2295299514d5bd6692da",
+    "revoked": false,
+    "createdBy": 8355569501,
+    "createdAt": "2026-09-28T20:30:26.601Z",
+    "activationDate": "2026-09-28T20:31:31.024Z"
+  },
+  "XEON-CAE92B1B65D9AB178F8172355D04BC12": {
+    "telegramId": 7093053298,
+    "expiry": "2054-02-21T16:30:36.787Z",
+    "hwid": "d8465ff7ac94119dbf5eb3d053dc0d4e5cdf5a10374b6b3ab0d31689f4783fc7",
+    "revoked": false,
+    "createdBy": 7093053298,
+    "createdAt": "2026-10-07T16:30:36.787Z",
+    "activationDate": "2026-10-07T16:32:38.147Z"
+  },
+  "XEON-0C1446E7355B3163B91981584E03B286": {
+    "telegramId": 5474851558,
+    "expiry": "2054-02-24T16:32:36.707Z",
+    "hwid": "e0a36a2891341fa6a279c84847ab38cf49d9a6e93f1c9884bf6bbdd2fb7236a3",
+    "revoked": false,
+    "createdBy": 5474851558,
+    "createdAt": "2026-10-10T16:32:36.707Z",
+    "activationDate": "2026-10-10T16:44:20.159Z"
+  },
+  "XEON-FE88E8BF84E5A37496B305F87A1DDA22": {
+    "telegramId": 8634750102,
+    "expiry": "2054-02-25T04:57:03.058Z",
+    "hwid": "b6a2e32831bfe521cb035b2b36f854f1a5fe2895a4b1c6453b8a4b0d04e516a4",
+    "revoked": false,
+    "createdBy": 8634750102,
+    "createdAt": "2026-10-11T04:57:03.058Z",
+    "activationDate": "2026-10-11T09:23:31.122Z"
+  },
+  "XEON-19B8C578DE0771A172E3473D85287B60": {
+    "telegramId": 7125095864,
+    "expiry": "2054-02-27T16:17:35.348Z",
+    "hwid": "7bd3512728b763ec38fb33307bfafd3460e01f03be3c01214245ed113e2364ed",
+    "revoked": false,
+    "createdBy": 7125095864,
+    "createdAt": "2026-10-13T16:17:35.348Z",
+    "activationDate": "2026-10-13T16:18:34.893Z"
+  },
+  "XEON-9782B7C2C0901A93810E7517F140FFC6": {
+    "telegramId": 7940645123,
+    "expiry": "2054-02-27T18:29:08.525Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7940645123,
+    "createdAt": "2026-10-13T18:29:08.525Z"
+  },
+  "XEON-3C6C27F8189A3D68738575AEF63A64A3": {
+    "telegramId": 6626641354,
+    "expiry": "2054-02-28T06:47:19.495Z",
+    "hwid": "bbac695b8033c05e0ca2778dc738e2fca76aa4846f63fce73e51c8f804540a08",
+    "revoked": false,
+    "createdBy": 6626641354,
+    "createdAt": "2026-10-14T06:47:19.495Z",
+    "activationDate": "2026-10-14T07:11:38.226Z"
+  },
+  "XEON-9ED2A9E77A3B4E6B600459CD71CA58F6": {
+    "telegramId": 7396719555,
+    "expiry": "2054-02-28T21:18:23.706Z",
+    "hwid": "733239518327ebaab95342602a700433f194a729b6d765b51e0ed6e922a837ff",
+    "revoked": false,
+    "createdBy": 7396719555,
+    "createdAt": "2026-10-14T21:18:23.706Z",
+    "activationDate": "2026-10-14T21:21:41.359Z"
+  },
+  "XEON-F8CD06C8EA914147D9FB036844826DD9": {
+    "telegramId": 8303428514,
+    "expiry": "2054-03-05T14:33:41.662Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8303428514,
+    "createdAt": "2026-10-19T14:33:41.662Z"
+  },
+  "XEON-129DC7B9048D3FBB7C6D193162112370": {
+    "telegramId": 8780842871,
+    "expiry": "2054-03-08T19:03:52.124Z",
+    "hwid": "466a0721fe7675a5b97d788817d69f54b43ee4f294d01d5ad536ec2c938edea4",
+    "revoked": false,
+    "createdBy": 8780842871,
+    "createdAt": "2026-10-22T19:03:52.124Z",
+    "activationDate": "2026-10-22T19:04:18.326Z"
+  },
+  "XEON-418C396281934AE0E31BB016D462998B": {
+    "telegramId": 7691330147,
+    "expiry": "2054-03-20T23:03:47.539Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 7691330147,
+    "createdAt": "2026-11-03T23:03:47.539Z"
+  },
+  "XEON-6E4217DC11C7DEA41D73BC49C283E504": {
+    "telegramId": 8552271400,
+    "expiry": "2054-03-31T12:45:24.836Z",
+    "hwid": "412f041667fe806c46ec14b7e315e7afdacd4d76d236c471d4ed47fbf16559c7",
+    "revoked": false,
+    "createdBy": 8552271400,
+    "createdAt": "2026-11-14T12:45:24.836Z",
+    "activationDate": "2026-11-14T12:45:55.603Z"
+  },
+  "XEON-FBF4F0BF0B95A86DF7F9EAFF74CF2635": {
+    "telegramId": 8682048504,
+    "expiry": "2054-04-05T03:52:57.332Z",
+    "hwid": null,
+    "revoked": false,
+    "createdBy": 8682048504,
+    "createdAt": "2026-11-19T03:52:57.332Z"
+  }
+}
