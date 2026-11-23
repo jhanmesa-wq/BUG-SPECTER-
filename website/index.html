@@ -1,81 +1,463 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPECTER VIP - login</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,-apple-system,sans-serif}
-    body{background:#0a0a0a;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-    body::before{content:"";position:fixed;inset:0;background:radial-gradient(600px 300px at 50% 0%, rgba(255,102,0,.18), transparent 70%);pointer-events:none}
-    .card{position:relative;background:#111111;width:100%;max-width:400px;border-radius:18px;padding:32px 32px 28px;box-shadow:0 20px 50px rgba(0,0,0,.6);border:1px solid #262626}
-    .card::before{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;background:linear-gradient(90deg,#ff6600,#ff8c00,#ff6600);border-radius:0 0 10px 10px}
-    .logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-    .logo-icon{width:46px;height:46px;background:#ff6600;color:#fff;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:21px;box-shadow:0 8px 20px rgba(255,102,0,.35)}
-    .logo-text h1{font-size:19px;line-height:1.1;letter-spacing:-.02em;color:#fff}
-    .logo-text p{font-size:12px;color:#ff8c00;margin-top:2px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
-    h2{font-size:24px;letter-spacing:-.02em;margin-bottom:6px;color:#fff}
-    .desc{font-size:14px;color:#a1a1aa;line-height:1.5;margin-bottom:24px}
-    label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:#d4d4d8}
-    input{width:100%;padding:13px 14px;border:1px solid #2e2e2e;border-radius:11px;font-size:14px;outline:none;transition:.2s;background:#1a1a1a;color:#fff;margin-bottom:16px}
-    input::placeholder{color:#71717a}
-    input:focus{border-color:#ff6600;box-shadow:0 0 0 3px rgba(255,102,0,.18);background:#1a1a1a}
-    .row{display:flex;justify-content:space-between;align-items:center;margin:-6px 0 18px;font-size:13px}
-    .row label{margin:0;font-weight:400;display:flex;gap:6px;align-items:center;color:#a1a1aa}
-    .row input{width:auto;margin:0;accent-color:#ff6600}
-    .row a{color:#ff8c00;text-decoration:none;font-weight:600}
-    .btn{width:100%;padding:14px;border:none;border-radius:11px;background:#ff6600;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;box-shadow:0 10px 25px rgba(255,102,0,.3)}
-    .btn:hover{background:#ff7a1a;transform:translateY(-1px)}
-    .btn:disabled{opacity:.6;cursor:not-allowed}
-    .divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:#71717a;font-size:12px}
-    .divider:before,.divider:after{content:"";flex:1;height:1px;background:#262626}
-    .buy{display:block;text-align:center;padding:13px;border:1px solid #333;border-radius:11px;text-decoration:none;color:#fff;font-size:14px;font-weight:600;background:#1a1a1a}
-    .buy:hover{border-color:#ff6600;color:#ff8c00}
-    .buy span{color:#ff6600}
-    .footer{margin-top:22px;text-align:center;font-size:12px;color:#525252}
-    #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:#ff6600;color:#fff;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 10px 20px rgba(0,0,0,.4);z-index:10}
-    #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-    #toast.error{background:#dc2626}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SPECTER VIP | Acceso</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --orange: #ed762b;
+    --orange-dark: #d85d19;
+    --black: #171717;
+    --gray: #777;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    color: #222;
+    background:
+        radial-gradient(ellipse at 15% 20%, #ffffff 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 85%, #e9e4df 0%, transparent 50%),
+        linear-gradient(135deg, #f4f2ef, #dedbd6);
+    overflow-x: hidden;
+}
+
+/* Fondo con profundidad */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    perspective: 1000px;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 30px;
+    transform: rotate(-28deg);
+    filter: blur(1px);
+}
+
+.shape.one {
+    width: 350px;
+    height: 350px;
+    right: -100px;
+    top: -100px;
+    background: linear-gradient(145deg, #f49a60, #e36a25);
+    opacity: .12;
+    box-shadow: 30px 40px 80px #a65a35;
+}
+
+.shape.two {
+    width: 220px;
+    height: 220px;
+    left: -100px;
+    bottom: -50px;
+    background: linear-gradient(145deg, #fff, #c9c1b9);
+    opacity: .7;
+    box-shadow: 20px 30px 60px #aaa;
+}
+
+/* Contenedor */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    perspective: 1200px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    padding: 38px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.94);
+    border: 1px solid rgba(255,255,255,.9);
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.13),
+        0 10px 25px rgba(0,0,0,.06),
+        inset 0 1px 0 #fff;
+    transform: translateZ(0);
+    animation: appear .7s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo */
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 35px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    background: linear-gradient(145deg, #fa9450, #df641f);
+    box-shadow: 0 9px 20px rgba(230,105,39,.27);
+}
+
+.logo-text h1 {
+    color: #202020;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+}
+
+.logo-text p {
+    color: var(--orange-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* Títulos */
+
+h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #202020;
+    letter-spacing: -1.2px;
+    margin-bottom: 9px;
+}
+
+.desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #858585;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #383838;
+    margin-bottom: 9px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 51px;
+    border: 1px solid #e8e6e3;
+    border-radius: 12px;
+    background: #f8f7f5;
+    color: #222;
+    padding: 0 15px;
+    font-size: 13px;
+    outline: none;
+    transition: .25s;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: white;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 4px rgba(237,118,43,.10);
+}
+
+/* Opciones */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0 25px;
+    font-size: 11px;
+}
+
+.row label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #777;
+    cursor: pointer;
+}
+
+.row input {
+    accent-color: var(--orange);
+}
+
+.row a {
+    color: var(--orange-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Botón */
+
+.btn {
+    width: 100%;
+    height: 53px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f18a47, #df641f);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(225,103,39,.23);
+    transition: .25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 27px rgba(225,103,39,.3);
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* Separador */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 27px 0;
+    color: #aaa;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eceae7;
+}
+
+/* Comprar */
+
+.buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 50px;
+    border: 1px solid #e8e5e1;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    background: white;
+    transition: .25s;
+}
+
+.buy span {
+    color: var(--orange);
+    font-size: 17px;
+}
+
+.buy:hover {
+    border-color: var(--orange);
+    background: #fffaf6;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #aaa;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+/* Notificaciones */
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: #242424;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 100;
+    box-shadow: 0 10px 30px #0002;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+#toast.error {
+    background: #c73535;
+}
+
+/* Móvil */
+
+@media(max-width: 480px) {
+    body {
+        padding: 17px;
+    }
+
+    .card {
+        padding: 29px 23px;
+        border-radius: 21px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
+<div class="background">
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+</div>
+
+<main class="container">
+
+<div class="card">
+
     <div class="logo-wrap">
-      <div class="logo-icon">X</div>
-      <div class="logo-text">
-        <h1>specter VIP</h1>
-        <p>USUARIOS VIP</p>
-      </div>
+        <div class="logo-icon">X</div>
+
+        <div class="logo-text">
+            <h1>SPECTER VIP</h1>
+            <p>MEMBERS ACCESS</p>
+        </div>
     </div>
 
-    <h2>HOLA DE NUEVO</h2>
-    <p class="desc">inicia sesion para acceder al panel</p>
+    <h2>Bienvenido de nuevo</h2>
 
-    <label for="username">usuario</label>
-    <input type="text" id="username" placeholder="pon tu usuario" autocomplete="username">
+    <p class="desc">
+        Inicia sesión para acceder a tu cuenta
+        y disfrutar de todos los servicios VIP.
+    </p>
 
-    <label for="password">contraseña</label>
-    <input type="password" id="password" placeholder="pon tu contraseña" autocomplete="current-password">
+    <div class="field">
+        <label for="username">Nombre de usuario</label>
+        <input
+            type="text"
+            id="username"
+            placeholder="Ingresa tu usuario"
+            autocomplete="username"
+        >
+    </div>
+
+    <div class="field">
+        <label for="password">Contraseña</label>
+        <input
+            type="password"
+            id="password"
+            placeholder="Ingresa tu contraseña"
+            autocomplete="current-password"
+        >
+    </div>
 
     <div class="row">
-      <label><input type="checkbox" id="remember"> recordar contraseña</label>
-      <a href="#">Forgot password?</a>
+        <label>
+            <input type="checkbox" id="remember">
+            Recordarme
+        </label>
+
+        <a href="#" onclick="return false;">¿Olvidaste tu contraseña?</a>
     </div>
 
-    <button class="btn" id="loginBtn" onclick="doLogin()">Sign in →</button>
+    <button
+        class="btn"
+        id="loginBtn"
+        onclick="doLogin()"
+    >
+        Iniciar sesión →
+    </button>
 
-    <div class="divider">NO TIENES CUENTA?</div>
+    <div class="divider">
+        ¿NO TIENES UNA CUENTA?
+    </div>
 
-    <a href="https://t.me/gatito_xxxxx" target="_blank" class="buy">BUY ACCESO <span>→</span></a>
+    <a
+        href="https://t.me/gatito_xxxxx"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy"
+    >
+        Comprar acceso <span>→</span>
+    </a>
 
-    <div class="footer">© 2026 specter VIP • Privacidad • Términos</div>
-  </div>
+    <div class="footer">
+        © 2026 SPECTER VIP<br>
+        Plataforma de acceso privado
+    </div>
 
-  <div id="toast"></div>
+</div>
+</main>
 
-  <script src="js/app.js"></script>
+<div id="toast"></div>
+
+<script src="js/app.js"></script>
+
 </body>
-</html>
+  </html>
+  
