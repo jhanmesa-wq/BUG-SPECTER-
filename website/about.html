@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About • Xeon Bvg VIP</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    /* LANGUAGE SELECTOR */
+
+    .language-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .language-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid var(--border, #333);
+      background: var(--card, #171717);
+      color: var(--text, #fff);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .language-btn:hover {
+      border-color: #ed762b;
+      color: #ed762b;
+    }
+
+    .language-dropdown {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 220px;
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 7px;
+      border-radius: 13px;
+      background: var(--card, #171717);
+      border: 1px solid var(--border, #333);
+      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+      display: none;
+      z-index: 2000;
+    }
+
+    .language-dropdown.active {
+      display: block;
+      animation: languageShow .2s ease;
+    }
+
+    @keyframes languageShow {
+      from {
+        opacity: 0;
+        transform: translateY(-7px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .language-option {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      width: 100%;
+      padding: 11px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text, #fff);
+      text-align: left;
+      cursor: pointer;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .language-option:hover {
+      background: rgba(237,118,43,.13);
+      color: #ed762b;
+    }
+
+    .language-option.selected {
+      background: rgba(237,118,43,.15);
+      color: #ed762b;
+    }
+
+    .language-option .flag {
+      font-size: 18px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-left: auto;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    /* RTL SUPPORT */
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] .language-dropdown {
+      right: auto;
+      left: 0;
+    }
+
+    [dir="rtl"] .language-option {
+      text-align: right;
+    }
+
+    @media(max-width:600px) {
+      .language-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+
+      .language-dropdown {
+        width: 195px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  if (!localStorage.getItem('xeon_token')) {
+    window.location.href = '/';
+  }
+</script>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="top-brand">Xeon Bvg VIP</div>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">Xeon Bvg VIP</div>
+
+    <a class="nav-item" href="/dashboard" data-i18n="dashboard">
+      Dashboard
+    </a>
+
+    <a class="nav-item" href="/about" data-i18n="about">
+      About
+    </a>
+
+    <a class="nav-item" href="/help" data-i18n="help">
+      Help
+    </a>
+
+    <a class="nav-item" href="/contact" data-i18n="follow">
+      Follow us
+    </a>
+
+    <a
+      class="nav-item"
+      style="margin-top:auto;color:#ff6b6b;"
+      href="#"
+      onclick="logout()"
+      data-i18n="logout"
+    >
+      Logout
+    </a>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="main-content">
+
+    <div class="top-brand">Xeon Bvg VIP</div>
+
+    <div class="page-header">
+
+      <div class="page-title" data-i18n="pageTitle">
+        ABOUT
+      </div>
+
+      <!-- LANGUAGE BUTTON -->
+
+      <div class="top-actions">
+
+        <div class="language-container">
+
+          <button
+            class="language-btn"
+            id="languageBtn"
+            type="button"
+            onclick="toggleLanguageMenu()"
+          >
+            <span id="currentFlag">🇺🇸</span>
+            <span id="currentLanguage">English</span>
+            <span>⌄</span>
+          </button>
+
+          <div
+            class="language-dropdown"
+            id="languageDropdown"
+          >
+
+            <button class="language-option" data-lang="es" onclick="changeLanguage('es')">
+              <span class="flag">🇪🇸</span> Español
+            </button>
+
+            <button class="language-option" data-lang="en" onclick="changeLanguage('en')">
+              <span class="flag">🇺🇸</span> English
+            </button>
+
+            <button class="language-option" data-lang="zh" onclick="changeLanguage('zh')">
+              <span class="flag">🇨🇳</span> 中文
+            </button>
+
+            <button class="language-option" data-lang="ru" onclick="changeLanguage('ru')">
+              <span class="flag">🇷🇺</span> Русский
+            </button>
+
+            <button class="language-option" data-lang="pt" onclick="changeLanguage('pt')">
+              <span class="flag">🇧🇷</span> Português
+            </button>
+
+            <button class="language-option" data-lang="hi" onclick="changeLanguage('hi')">
+              <span class="flag">🇮🇳</span> हिन्दी
+            </button>
+
+            <button class="language-option" data-lang="he" onclick="changeLanguage('he')">
+              <span class="flag">🇮🇱</span> עברית
+            </button>
+
+            <button class="language-option" data-lang="fr" onclick="changeLanguage('fr')">
+              <span class="flag">🇫🇷</span> Français
+            </button>
+
+            <button class="language-option" data-lang="de" onclick="changeLanguage('de')">
+              <span class="flag">🇩🇪</span> Deutsch
+            </button>
+
+            <button class="language-option" data-lang="it" onclick="changeLanguage('it')">
+              <span class="flag">🇮🇹</span> Italiano
+            </button>
+
+            <button class="language-option" data-lang="ja" onclick="changeLanguage('ja')">
+              <span class="flag">🇯🇵</span> 日本語
+            </button>
+
+            <button class="language-option" data-lang="ko" onclick="changeLanguage('ko')">
+              <span class="flag">🇰🇷</span> 한국어
+            </button>
+
+            <button class="language-option" data-lang="ar" onclick="changeLanguage('ar')">
+              <span class="flag">🇸🇦</span> العربية
+            </button>
+
+            <button class="language-option" data-lang="tr" onclick="changeLanguage('tr')">
+              <span class="flag">🇹🇷</span> Türkçe
+            </button>
+
+            <button class="language-option" data-lang="id" onclick="changeLanguage('id')">
+              <span class="flag">🇮🇩</span> Indonesia
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ABOUT CARD -->
+
+    <div class="form-card" style="max-width:600px;">
+
+      <p
+        id="aboutDescription"
+        style="line-height:1.7;color:var(--text);font-size:0.95rem;"
+      >
+        Xeon Bvg VIP is a tool designed to demonstrate or test vulnerabilities that may cause WhatsApp to become unstable or crash when it receives specially crafted content.
+
+        <br><br>
+
+        This tool may cause WhatsApp to crash, freeze, or behave unexpectedly. Use it only for testing or research purposes and only on devices or accounts you own or have permission to test.
+
+        <br><br>
+
+        The creator is not responsible for data loss, app issues, account problems, or any other damage resulting from its use.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!-- LANGUAGE SYSTEM -->
+
+<script>
+
+const translations = {
+
+  en: {
+    name: "English",
+    flag: "🇺🇸",
+    dashboard: "Dashboard",
+    about: "About",
+    help: "Help",
+    follow: "Follow us",
+    logout: "Logout",
+    pageTitle: "ABOUT",
+    description: [
+      "Xeon Bvg VIP is a tool designed to demonstrate or test vulnerabilities that may cause WhatsApp to become unstable or crash when it receives specially crafted content.",
+      "This tool may cause WhatsApp to crash, freeze, or behave unexpectedly. Use it only for testing or research purposes and only on devices or accounts you own or have permission to test.",
+      "The creator is not responsible for data loss, app issues, account problems, or any other damage resulting from its use."
+    ]
+  },
+
+  es: {
+    name: "Español",
+    flag: "🇪🇸",
+    dashboard: "Panel principal",
+    about: "Acerca de",
+    help: "Ayuda",
+    follow: "Síguenos",
+    logout: "Cerrar sesión",
+    pageTitle: "ACERCA DE",
+    description: [
+      "Xeon Bvg VIP es una herramienta diseñada para demostrar o probar vulnerabilidades que pueden provocar que WhatsApp se vuelva inestable o se cierre al recibir contenido especialmente diseñado.",
+      "Esta herramienta puede provocar que WhatsApp se cierre, se congele o tenga un comportamiento inesperado. Utilízala únicamente para pruebas o investigación y solamente en dispositivos o cuentas que sean tuyos o tengas autorización para probar.",
+      "El creador no se responsabiliza por la pérdida de datos, problemas con la aplicación, inconvenientes con las cuentas ni otros daños derivados de su uso."
+    ]
+  },
+
+  zh: {
+    name: "中文",
+    flag: "🇨🇳",
+    dashboard: "控制面板",
+    about: "关于我们",
+    help: "帮助",
+    follow: "关注我们",
+    logout: "退出登录",
+    pageTitle: "关于",
+    description: [
+      "Xeon Bvg VIP 是一款用于演示或测试相关漏洞的工具。这些漏洞可能导致 WhatsApp 在接收特定内容时出现不稳定或崩溃。",
+      "此工具可能导致 WhatsApp 崩溃、冻结或出现异常行为。仅可用于测试或研究，并且只能在您拥有或获得授权的设备和账户上使用。",
+      "创作者不对使用本工具造成的数据丢失、应用问题、账户问题或其他损害承担责任。"
+    ]
+  },
+
+  ru: {
+    name: "Русский",
+    flag: "🇷🇺",
+    dashboard: "Панель управления",
+    about: "О проекте",
+    help: "Помощь",
+    follow: "Подписывайтесь",
+    logout: "Выйти",
+    pageTitle: "О ПРОЕКТЕ",
+    description: [
+      "Xeon Bvg VIP — это инструмент, предназначенный для демонстрации или тестирования уязвимостей, которые могут привести к нестабильной работе или сбоям WhatsApp при получении специально подготовленного содержимого.",
+      "Этот инструмент может вызвать сбои, зависание или неожиданное поведение WhatsApp. Используйте его только для тестирования или исследований и только на устройствах и аккаунтах, которыми вы владеете или которые вам разрешено тестировать.",
+      "Создатель не несёт ответственности за потерю данных, проблемы с приложением, аккаунтом или любой другой ущерб, возникший в результате использования."
+    ]
+  },
+
+  pt: {
+    name: "Português",
+    flag: "🇧🇷",
+    dashboard: "Painel",
+    about: "Sobre",
+    help: "Ajuda",
+    follow: "Siga-nos",
+    logout: "Sair",
+    pageTitle: "SOBRE",
+    description: [
+      "Xeon Bvg VIP é uma ferramenta desenvolvida para demonstrar ou testar vulnerabilidades que podem fazer com que o WhatsApp fique instável ou falhe ao receber conteúdo especialmente elaborado.",
+      "Esta ferramenta pode fazer com que o WhatsApp falhe, congele ou apresente comportamentos inesperados. Utilize-a apenas para testes ou pesquisas e somente em dispositivos ou contas que sejam seus ou que você tenha autorização para testar.",
+      "O criador não se responsabiliza por perda de dados, problemas no aplicativo, problemas na conta ou quaisquer outros danos decorrentes do uso."
+    ]
+  },
+
+  hi: {
+    name: "हिन्दी",
+    flag: "🇮🇳",
+    dashboard: "डैशबोर्ड",
+    about: "हमारे बारे में",
+    help: "सहायता",
+    follow: "हमें फ़ॉलो करें",
+    logout: "लॉग आउट",
+    pageTitle: "हमारे बारे में",
+    description: [
+      "Xeon Bvg VIP एक ऐसा टूल है जिसे उन कमजोरियों को प्रदर्शित या परीक्षण करने के लिए बनाया गया है जिनसे विशेष सामग्री प्राप्त होने पर WhatsApp अस्थिर या क्रैश हो सकता है।",
+      "इस टूल से WhatsApp क्रैश हो सकता है, रुक सकता है या अप्रत्याशित व्यवहार कर सकता है। इसका उपयोग केवल परीक्षण या शोध के लिए और केवल उन्हीं डिवाइस या खातों पर करें जिनके आप मालिक हैं या जिनका परीक्षण करने की अनुमति आपके पास है।",
+      "इसके उपयोग से होने वाले डेटा नुकसान, ऐप की समस्याओं, खाता संबंधी समस्याओं या अन्य नुकसान के लिए निर्माता जिम्मेदार नहीं है।"
+    ]
+  },
+
+  he: {
+    name: "עברית",
+    flag: "🇮🇱",
+    dashboard: "לוח בקרה",
+    about: "אודות",
+    help: "עזרה",
+    follow: "עקבו אחרינו",
+    logout: "התנתקות",
+    pageTitle: "אודות",
+    description: [
+      "Xeon Bvg VIP הוא כלי שנועד להדגים או לבדוק חולשות שעלולות לגרום ל-WhatsApp לפעול בצורה לא יציבה או לקרוס בעת קבלת תוכן שנוצר במיוחד.",
+      "כלי זה עלול לגרום ל-WhatsApp לקרוס, לקפוא או להתנהג באופן בלתי צפוי. יש להשתמש בו רק לצורכי בדיקה או מחקר ורק במכשירים או בחשבונות שבבעלותכם או שיש לכם הרשאה לבדוק.",
+      "היוצר אינו אחראי לאובדן נתונים, לבעיות באפליקציה, לבעיות בחשבון או לכל נזק אחר הנובע מהשימוש בכלי."
+    ]
+  },
+
+  fr: {
+    name: "Français",
+    flag: "🇫🇷",
+    dashboard: "Tableau de bord",
+    about: "À propos",
+    help: "Aide",
+    follow: "Suivez-nous",
+    logout: "Déconnexion",
+    pageTitle: "À PROPOS",
+    description: [
+      "Xeon Bvg VIP est un outil conçu pour démontrer ou tester des vulnérabilités susceptibles de rendre WhatsApp instable ou de provoquer son plantage lorsqu'il reçoit du contenu spécialement conçu.",
+      "Cet outil peut entraîner le plantage, le blocage ou un comportement inattendu de WhatsApp. Utilisez-le uniquement à des fins de test ou de recherche et uniquement sur des appareils ou des comptes que vous possédez ou que vous êtes autorisé à tester.",
+      "Le créateur décline toute responsabilité en cas de perte de données, de problèmes d'application, de compte ou de tout autre dommage résultant de son utilisation."
+    ]
+  },
+
+  de: {
+    name: "Deutsch",
+    flag: "🇩🇪",
+    dashboard: "Dashboard",
+    about: "Über uns",
+    help: "Hilfe",
+    follow: "Folge uns",
+    logout: "Abmelden",
+    pageTitle: "ÜBER UNS",
+    description: [
+      "Xeon Bvg VIP ist ein Tool zur Demonstration oder Prüfung von Schwachstellen, die dazu führen können, dass WhatsApp beim Empfang speziell gestalteter Inhalte instabil wird oder abstürzt.",
+      "Dieses Tool kann dazu führen, dass WhatsApp abstürzt, einfriert oder sich unerwartet verhält. Verwenden Sie es ausschließlich zu Test- oder Forschungszwecken und nur auf Geräten oder Konten, die Ihnen gehören oder für die Sie eine Testberechtigung haben.",
+      "Der Ersteller übernimmt keine Verantwortung für Datenverluste, App-Probleme, Kontoprobleme oder sonstige Schäden, die durch die Verwendung entstehen."
+    ]
+  },
+
+  it: {
+    name: "Italiano",
+    flag: "🇮🇹",
+    dashboard: "Dashboard",
+    about: "Informazioni",
+    help: "Aiuto",
+    follow: "Seguici",
+    logout: "Esci",
+    pageTitle: "INFORMAZIONI",
+    description: [
+      "Xeon Bvg VIP è uno strumento progettato per dimostrare o testare vulnerabilità che potrebbero rendere WhatsApp instabile o causarne il blocco quando riceve contenuti appositamente creati.",
+      "Questo strumento può causare arresti anomali, blocchi o comportamenti imprevisti di WhatsApp. Utilizzalo esclusivamente per test o ricerca e solo su dispositivi o account di tua proprietà o che sei autorizzato a testare.",
+      "Il creatore non è responsabile per perdita di dati, problemi dell'applicazione, problemi dell'account o altri danni derivanti dal suo utilizzo."
+    ]
+  },
+
+  ja: {
+    name: "日本語",
+    flag: "🇯🇵",
+    dashboard: "ダッシュボード",
+    about: "概要",
+    help: "ヘルプ",
+    follow: "フォロー",
+    logout: "ログアウト",
+    pageTitle: "概要",
+    description: [
+      "Xeon Bvg VIP は、特別に作成されたコンテンツを受信した際に WhatsApp が不安定になったりクラッシュしたりする可能性のある脆弱性を実演またはテストするためのツールです。",
+      "このツールによって WhatsApp がクラッシュしたり、フリーズしたり、予期しない動作をしたりする可能性があります。テストまたは研究目的にのみ使用し、自分が所有する、またはテスト許可を得ているデバイスやアカウントでのみ使用してください。",
+      "使用によって発生したデータ損失、アプリの問題、アカウントの問題、その他の損害について、作成者は責任を負いません。"
+    ]
+  },
+
+  ko: {
+    name: "한국어",
+    flag: "🇰🇷",
+    dashboard: "대시보드",
+    about: "소개",
+    help: "도움말",
+    follow: "팔로우",
+    logout: "로그아웃",
+    pageTitle: "소개",
+    description: [
+      "Xeon Bvg VIP는 특별히 제작된 콘텐츠를 수신할 때 WhatsApp이 불안정해지거나 충돌할 수 있는 취약점을 시연하거나 테스트하기 위한 도구입니다.",
+      "이 도구는 WhatsApp의 충돌, 정지 또는 예상치 못한 동작을 유발할 수 있습니다. 테스트 또는 연구 목적으로만 사용하고 본인이 소유하거나 테스트 권한이 있는 기기 및 계정에서만 사용하세요.",
+      "제작자는 사용으로 인해 발생하는 데이터 손실, 앱 문제, 계정 문제 또는 기타 손해에 대해 책임지지 않습니다."
+    ]
+  },
+
+  ar: {
+    name: "العربية",
+    flag: "🇸🇦",
+    dashboard: "لوحة التحكم",
+    about: "حول",
+    help: "المساعدة",
+    follow: "تابعنا",
+    logout: "تسجيل الخروج",
+    pageTitle: "حول المشروع",
+    description: [
+      "Xeon Bvg VIP هي أداة مصممة لعرض أو اختبار الثغرات التي قد تجعل WhatsApp غير مستقر أو تتسبب في تعطله عند استقبال محتوى مُعد خصيصًا.",
+      "قد تتسبب هذه الأداة في تعطل WhatsApp أو تجمده أو تصرفه بشكل غير متوقع. استخدمها لأغراض الاختبار أو البحث فقط، وعلى الأجهزة أو الحسابات التي تملكها أو لديك إذن لاختبارها.",
+      "لا يتحمل المنشئ مسؤولية فقدان البيانات أو مشكلات التطبيق أو الحساب أو أي أضرار أخرى ناتجة عن الاستخدام."
+    ]
+  },
+
+  tr: {
+    name: "Türkçe",
+    flag: "🇹🇷",
+    dashboard: "Kontrol Paneli",
+    about: "Hakkında",
+    help: "Yardım",
+    follow: "Bizi takip edin",
+    logout: "Çıkış yap",
+    pageTitle: "HAKKINDA",
+    description: [
+      "Xeon Bvg VIP, özel olarak hazırlanmış içerikler alındığında WhatsApp'ın kararsız çalışmasına veya çökmesine neden olabilecek güvenlik açıklarını göstermek ya da test etmek için tasarlanmış bir araçtır.",
+      "Bu araç WhatsApp'ın çökmesine, donmasına veya beklenmedik davranmasına neden olabilir. Yalnızca test veya araştırma amacıyla ve yalnızca size ait olan ya da test etme izniniz bulunan cihazlarda veya hesaplarda kullanın.",
+      "Oluşabilecek veri kaybı, uygulama sorunları, hesap problemleri veya diğer zararlardan geliştirici sorumlu değildir."
+    ]
+  },
+
+  id: {
+    name: "Indonesia",
+    flag: "🇮🇩",
+    dashboard: "Dasbor",
+    about: "Tentang",
+    help: "Bantuan",
+    follow: "Ikuti kami",
+    logout: "Keluar",
+    pageTitle: "TENTANG",
+    description: [
+      "Xeon Bvg VIP adalah alat yang dirancang untuk mendemonstrasikan atau menguji kerentanan yang dapat menyebabkan WhatsApp menjadi tidak stabil atau mengalami crash saat menerima konten yang dibuat secara khusus.",
+      "Alat ini dapat menyebabkan WhatsApp mengalami crash, macet, atau berperilaku tidak terduga. Gunakan hanya untuk pengujian atau penelitian dan hanya pada perangkat atau akun yang Anda miliki atau yang telah Anda izinkan untuk diuji.",
+      "Pembuat tidak bertanggung jawab atas kehilangan data, masalah aplikasi, masalah akun, atau kerusakan lainnya akibat penggunaan alat ini."
+    ]
+  }
+
+};
+
+
+/* LANGUAGE ENGINE */
+
+function changeLanguage(lang) {
+
+  const selected = translations[lang];
+
+  if (!selected) return;
+
+  // Save language
+
+  localStorage.setItem('xeon_language', lang);
+
+  // Update HTML language
+
+  document.documentElement.lang = lang;
+
+  // RTL languages
+
+  const rtlLanguages = ['he', 'ar'];
+
+  document.documentElement.dir =
+    rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
+
+  // Translate navigation
+
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+
+    const key = element.getAttribute('data-i18n');
+
+    if (selected[key] !== undefined) {
+      element.textContent = selected[key];
+    }
+
+  });
+
+  // Translate About description
+
+  const description = document.getElementById('aboutDescription');
+
+  if (description) {
+
+    description.replaceChildren();
+
+    selected.description.forEach((paragraph, index) => {
+
+      const text = document.createTextNode(paragraph);
+
+      description.appendChild(text);
+
+      if (index < selected.description.length - 1) {
+
+        description.appendChild(document.createElement('br'));
+        description.appendChild(document.createElement('br'));
+
+      }
+
+    });
+
+  }
+
+  // Update language button
+
+  document.getElementById('currentFlag').textContent = selected.flag;
+
+document.getElementById('currentLanguage').textContent = selected.name;
+
+// Selected option
+document.querySelectorAll('.language-option').forEach(button => {
+    button.classList.toggle(
+        'selected',
+        button.dataset.lang === lang
+    );
+});
+
+// Close dropdown
+document.getElementById('languageDropdown')
+    .classList.remove('active');
+}
+
+/* OPEN / CLOSE LANGUAGE MENU */
+function toggleLanguageMenu() {
+    document.getElementById('languageDropdown')
+        .classList.toggle('active');
+}
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+document.addEventListener('click', function(event) {
+    const container = document.querySelector('.language-container');
+
+    if (container && !container.contains(event.target)) {
+        document.getElementById('languageDropdown')
+            .classList.remove('active');
+    }
+});
+
+/* RESTORE SAVED LANGUAGE */
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('xeon_language') || 'en';
+
+    changeLanguage(
+        translations[savedLanguage] ? savedLanguage : 'en'
+    );
+});
+</script>
+
+<!-- ORIGINAL SCRIPTS -->
+<script src="js/app.js"></script>
+<script src="js/occult-bg.js"></script>
+
+</body>
+</html>
