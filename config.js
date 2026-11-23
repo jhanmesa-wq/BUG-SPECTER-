@@ -1,12 +1,12 @@
 const global = {
     owner: [8271623149],
-    botToken: "9009004191:AAHjBO2TSf4BTK3yykMQbPDDIak-Uy5mp4U",
-    GROUP_ID: "-1003698813612",
-    CHANNEL_ID: "-1001397662853",
-    VIP_CHANNEL_ID: "-1003242892147",
-    GROUP_LINK: "https://t.me/+ZcdcGVv6esAxOWI1",
-    CHANNEL_INVITE_LINK: "https://t.me/dgxeon13",
-    WHATSAPP_LINK: "https://whatsapp.com/channel/0029Vb5Z9SjIXnlvl97EQm2i",
+    botToken: "9246549807:AAGNbhHtslGD0s7JrFsdhf3K4M-MYCThJrs",
+    GROUP_ID: "-5444762057",
+    CHANNEL_ID: "-1003755262837",
+    VIP_CHANNEL_ID: "-1003755262837",
+    GROUP_LINK: "https://t.me/+eWVo-SSnQpYyNWJh",
+    CHANNEL_INVITE_LINK: "https://t.me/gatito_444",
+    WHATSAPP_LINK: "https://what",
     YOUTUBE_LINK: "https://youtube.com/@dgxeon",
     INSTAGRAM_LINK: "https://www.instagram.com/unicorn_xeon13",
     idch: "120363409985606068@newsletter",
@@ -21,13 +21,13 @@ const global = {
     OFFLINE_GRACE_PERIOD: 10 * 60 * 1000,
     
     // === WEB + LOGGING ===
-LOG_GROUP_ID: -1004325456930,          // ← put your log group ID here
+LOG_GROUP_ID: "-5444762057",          // ← put your log group ID here
 WEB_JWT_SECRET: "XeonLoveSecretKeyChangeMe123!@#",  // change this to something strong
 WEB_DOMAIN: "https://bug-specter.onrender.com",
 BUY_ACCESS_LINK: "https://t.me/gatito_xxxxx",
 INSTAGRAM: "https://instagram.com/yourusername",
 YOUTUBE: "https://youtube.com/@yourchannel",
-TELEGRAM_CHANNEL: "https://t.me/yourchannel",
+TELEGRAM_CHANNEL: "https://t.me/gatito_444",
 WHATSAPP_CHANNEL: "https://whatsapp.com/channel/xxxx",
 GREETING_COOLDOWN: 30,          // seconds (cooldown after successful greeting)
 }
