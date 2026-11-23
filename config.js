@@ -1,4 +1,4 @@
-const global = {
+ const global = {
     owner: [8271623149],
     botToken: "9246549807:AAGNbhHtslGD0s7JrFsdhf3K4M-MYCThJrs",
     GROUP_ID: "-5444762057",
@@ -6,7 +6,7 @@ const global = {
     VIP_CHANNEL_ID: "-1003755262837",
     GROUP_LINK: "https://t.me/+eWVo-SSnQpYyNWJh",
     CHANNEL_INVITE_LINK: "https://t.me/gatito_444",
-    WHATSAPP_LINK: "https://what",
+    WHATSAPP_LINK: "https://whatsapp.com/channel/0029VbE5qq3CXC3RrfEUTn1U",
     YOUTUBE_LINK: "https://youtube.com/@dgxeon",
     INSTAGRAM_LINK: "https://www.instagram.com/unicorn_xeon13",
     idch: "120363409985606068@newsletter",
