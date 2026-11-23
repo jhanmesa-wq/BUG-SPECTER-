@@ -1,77 +1,794 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dashboard • Xeon Bvg VIP</title>
+
   <link rel="stylesheet" href="css/style.css">
+
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    /* LANGUAGE SELECTOR */
+
+    .language-container {
+      position: relative;
+      z-index: 1000;
+    }
+
+    .language-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 14px;
+      border: 1px solid var(--border, #333);
+      border-radius: 10px;
+      background: var(--card, #171717);
+      color: var(--text, #fff);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .language-btn:hover {
+      border-color: #ed762b;
+      color: #ed762b;
+    }
+
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 215px;
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 7px;
+      border: 1px solid var(--border, #333);
+      border-radius: 12px;
+      background: var(--card, #171717);
+      box-shadow: 0 15px 40px rgba(0,0,0,.3);
+      z-index: 3000;
+    }
+
+    .language-dropdown.active {
+      display: block;
+      animation: languageShow .2s ease;
+    }
+
+    @keyframes languageShow {
+      from {
+        opacity: 0;
+        transform: translateY(-7px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .language-option {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text, #fff);
+      text-align: left;
+      cursor: pointer;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .language-option:hover,
+    .language-option.selected {
+      background: rgba(237,118,43,.14);
+      color: #ed762b;
+    }
+
+    .language-option .flag {
+      font-size: 18px;
+    }
+
+    .dashboard-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 18px;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] .language-dropdown {
+      right: auto;
+      left: 0;
+    }
+
+    [dir="rtl"] .language-option {
+      text-align: right;
+    }
+
+    @media(max-width:600px) {
+      .language-btn {
+        padding: 9px 11px;
+      }
+    }
+  </style>
 </head>
+
 <body onload="loadDashboard()">
+
 <script>
   if (!localStorage.getItem('xeon_token')) {
     window.location.href = '/';
   }
 </script>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <div class="top-brand">Xeon Bvg VIP</div>
 
-  <div class="app">
-    <div class="sidebar" id="sidebar">
-  <div class="sidebar-brand">Xeon Bvg VIP</div>
-  <a class="nav-item" href="/dashboard">Dashboard</a>
-  <a class="nav-item" href="/about">About</a>
-  <a class="nav-item" href="/help">Help</a>
-  <a class="nav-item" href="/contact">Follow us</a>
-  <a class="nav-item" style="margin-top:auto;color:#ff6b6b;" href="#" onclick="logout()">Logout</a>
-</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <div class="main-content">
-      <div class="header">
-        <div>
-          <div style="font-family:'Orbitron';font-size:1.25rem;color:var(--green);">
-            Welcome, <span id="user-name">User</span>
-          </div>
-          <div id="expiry-text" style="display:none;font-size:0.78rem;color:var(--muted);margin-top:4px;"></div>
-        </div>
-        <div class="status">
-          <div id="status-dot" class="dot off"></div>
-          <span id="status-text">CHECKING...</span>
-        </div>
-      </div>
+<div class="top-brand">Xeon Bvg VIP</div>
 
-      <div class="grid">
-                        <div class="cmd-card" onclick="location.href='/android'">
-          <h3>ANDROID BVG</h3>
-          <div class="count" style="line-height:1.7; margin-top:12px;">
-            RICHCRASH total usage: <span id="c-richcrash">0</span><br>
-            BLOKCRASH total usage: <span id="c-blokcrash">0</span>
-          </div>
-        </div>
+<div class="app">
 
-        <div class="cmd-card" onclick="location.href='/ios'">
-  <h3>iOS BVG</h3>
-  <div class="count" style="line-height:1.7; margin-top:12px;">
-    RICHXIOS total usage: <span id="c-ios">0</span><br>
-    RICHXIOSV2 total usage: <span id="c-richxiosv2">0</span>
+  <!-- SIDEBAR -->
+
+  <div class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">Xeon Bvg VIP</div>
+
+    <a class="nav-item" href="/dashboard" data-i18n="dashboard">
+      Dashboard
+    </a>
+
+    <a class="nav-item" href="/about" data-i18n="about">
+      About
+    </a>
+
+    <a class="nav-item" href="/help" data-i18n="help">
+      Help
+    </a>
+
+    <a class="nav-item" href="/contact" data-i18n="follow">
+      Follow us
+    </a>
+
+    <a
+      class="nav-item"
+      style="margin-top:auto;color:#ff6b6b;"
+      href="#"
+      onclick="logout()"
+      data-i18n="logout"
+    >
+      Logout
+    </a>
+
   </div>
-</div>
-        <!--<div class="cmd-card" onclick="location.href='/group'">
-          <h3>GROUP BVG</h3>
-          <p>CRASHBETAGC</p>
-          <div class="count">Global Total Executed: <span id="c-group">0</span> times</div>
-        </div> -->
-      </div>
 
-      <div style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;">LIVE CONSOLE</div>
-      <div class="console-box" id="console">
-        <div class="console-line">System ready...</div>
+  <!-- MAIN CONTENT -->
+
+  <div class="main-content">
+
+    <!-- LANGUAGE SELECTOR -->
+
+    <div class="dashboard-toolbar">
+
+      <div class="language-container">
+
+        <button
+          class="language-btn"
+          id="languageBtn"
+          type="button"
+          onclick="toggleLanguageMenu()"
+        >
+          <span id="currentFlag">🇺🇸</span>
+          <span id="currentLanguage">English</span>
+          <span>⌄</span>
+        </button>
+
+        <div class="language-dropdown" id="languageDropdown">
+
+          <button class="language-option" data-lang="es" onclick="changeLanguage('es')">
+            <span class="flag">🇪🇸</span> Español
+          </button>
+
+          <button class="language-option" data-lang="en" onclick="changeLanguage('en')">
+            <span class="flag">🇺🇸</span> English
+          </button>
+
+          <button class="language-option" data-lang="zh" onclick="changeLanguage('zh')">
+            <span class="flag">🇨🇳</span> 中文
+          </button>
+
+          <button class="language-option" data-lang="ru" onclick="changeLanguage('ru')">
+            <span class="flag">🇷🇺</span> Русский
+          </button>
+
+          <button class="language-option" data-lang="pt" onclick="changeLanguage('pt')">
+            <span class="flag">🇧🇷</span> Português
+          </button>
+
+          <button class="language-option" data-lang="hi" onclick="changeLanguage('hi')">
+            <span class="flag">🇮🇳</span> हिन्दी
+          </button>
+
+          <button class="language-option" data-lang="he" onclick="changeLanguage('he')">
+            <span class="flag">🇮🇱</span> עברית
+          </button>
+
+          <button class="language-option" data-lang="fr" onclick="changeLanguage('fr')">
+            <span class="flag">🇫🇷</span> Français
+          </button>
+
+          <button class="language-option" data-lang="de" onclick="changeLanguage('de')">
+            <span class="flag">🇩🇪</span> Deutsch
+          </button>
+
+          <button class="language-option" data-lang="it" onclick="changeLanguage('it')">
+            <span class="flag">🇮🇹</span> Italiano
+          </button>
+
+          <button class="language-option" data-lang="ja" onclick="changeLanguage('ja')">
+            <span class="flag">🇯🇵</span> 日本語
+          </button>
+
+          <button class="language-option" data-lang="ko" onclick="changeLanguage('ko')">
+            <span class="flag">🇰🇷</span> 한국어
+          </button>
+
+          <button class="language-option" data-lang="ar" onclick="changeLanguage('ar')">
+            <span class="flag">🇸🇦</span> العربية
+          </button>
+
+          <button class="language-option" data-lang="tr" onclick="changeLanguage('tr')">
+            <span class="flag">🇹🇷</span> Türkçe
+          </button>
+
+          <button class="language-option" data-lang="id" onclick="changeLanguage('id')">
+            <span class="flag">🇮🇩</span> Indonesia
+          </button>
+
+        </div>
       </div>
     </div>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div>
+
+        <div style="font-family:'Orbitron';font-size:1.25rem;color:var(--green);">
+
+          <span data-i18n="welcome">Welcome,</span>
+
+          <span id="user-name">User</span>
+
+        </div>
+
+        <div
+          id="expiry-text"
+          style="display:none;font-size:0.78rem;color:var(--muted);margin-top:4px;"
+        ></div>
+
+      </div>
+
+      <div class="status">
+
+        <div id="status-dot" class="dot off"></div>
+
+        <span id="status-text" data-i18n="checking">
+          CHECKING...
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- DASHBOARD CARDS -->
+
+    <div class="grid">
+
+      <div class="cmd-card" onclick="location.href='/android'">
+
+        <h3 data-i18n="android">ANDROID BVG</h3>
+
+        <div class="count" style="line-height:1.7;margin-top:12px;">
+
+          <span data-i18n="richTotal">RICHCRASH total usage:</span>
+
+          <span id="c-richcrash">0</span>
+
+          <br>
+
+          <span data-i18n="blokTotal">BLOKCRASH total usage:</span>
+
+          <span id="c-blokcrash">0</span>
+
+        </div>
+
+      </div>
+
+      <div class="cmd-card" onclick="location.href='/ios'">
+
+        <h3 data-i18n="ios">iOS BVG</h3>
+
+        <div class="count" style="line-height:1.7;margin-top:12px;">
+
+          <span data-i18n="iosTotal">RICHXIOS total usage:</span>
+
+          <span id="c-ios">0</span>
+
+          <br>
+
+          <span data-i18n="iosV2Total">RICHXIOSV2 total usage:</span>
+
+          <span id="c-richxiosv2">0</span>
+
+        </div>
+
+      </div>
+
+      <!--
+      <div class="cmd-card" onclick="location.href='/group'">
+        <h3>GROUP BVG</h3>
+        <p>CRASHBETAGC</p>
+        <div class="count">
+          Global Total Executed:
+          <span id="c-group">0</span> times
+        </div>
+      </div>
+      -->
+
+    </div>
+
+    <!-- LIVE CONSOLE -->
+
+    <div
+      style="font-size:0.8rem;color:var(--muted);margin-bottom:10px;"
+      data-i18n="liveConsole"
+    >
+      LIVE CONSOLE
+    </div>
+
+    <div class="console-box" id="console">
+
+      <div class="console-line" id="consoleDefault" data-i18n="systemReady">
+        System ready...
+      </div>
+
+    </div>
+
   </div>
 
-  <div id="toast" class="toast"></div>
-  <script src="js/app.js"></script>
-  <script src="js/occult-bg.js"></script>
+</div>
+
+<div id="toast" class="toast"></div>
+
+
+<!-- LANGUAGE SYSTEM -->
+
+<script>
+
+const xeonDashboardTranslations = {
+
+  en: {
+    name: "English",
+    flag: "🇺🇸",
+    dashboard: "Dashboard",
+    about: "About",
+    help: "Help",
+    follow: "Follow us",
+    logout: "Logout",
+    welcome: "Welcome,",
+    checking: "CHECKING...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH total usage:",
+    blokTotal: "BLOKCRASH total usage:",
+    iosTotal: "RICHXIOS total usage:",
+    iosV2Total: "RICHXIOSV2 total usage:",
+    liveConsole: "LIVE CONSOLE",
+    systemReady: "System ready..."
+  },
+
+  es: {
+    name: "Español",
+    flag: "🇪🇸",
+    dashboard: "Panel principal",
+    about: "Acerca de",
+    help: "Ayuda",
+    follow: "Síguenos",
+    logout: "Cerrar sesión",
+    welcome: "Bienvenido,",
+    checking: "VERIFICANDO...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Uso total de RICHCRASH:",
+    blokTotal: "Uso total de BLOKCRASH:",
+    iosTotal: "Uso total de RICHXIOS:",
+    iosV2Total: "Uso total de RICHXIOSV2:",
+    liveConsole: "CONSOLA EN VIVO",
+    systemReady: "Sistema preparado..."
+  },
+
+  zh: {
+    name: "中文",
+    flag: "🇨🇳",
+    dashboard: "控制面板",
+    about: "关于我们",
+    help: "帮助",
+    follow: "关注我们",
+    logout: "退出登录",
+    welcome: "欢迎，",
+    checking: "正在检查...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH 总使用次数：",
+    blokTotal: "BLOKCRASH 总使用次数：",
+    iosTotal: "RICHXIOS 总使用次数：",
+    iosV2Total: "RICHXIOSV2 总使用次数：",
+    liveConsole: "实时控制台",
+    systemReady: "系统已就绪..."
+  },
+
+  ru: {
+    name: "Русский",
+    flag: "🇷🇺",
+    dashboard: "Панель управления",
+    about: "О проекте",
+    help: "Помощь",
+    follow: "Подписывайтесь",
+    logout: "Выйти",
+    welcome: "Добро пожаловать,",
+    checking: "ПРОВЕРКА...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Всего использований RICHCRASH:",
+    blokTotal: "Всего использований BLOKCRASH:",
+    iosTotal: "Всего использований RICHXIOS:",
+    iosV2Total: "Всего использований RICHXIOSV2:",
+    liveConsole: "ЖИВАЯ КОНСОЛЬ",
+    systemReady: "Система готова..."
+  },
+
+  pt: {
+    name: "Português",
+    flag: "🇧🇷",
+    dashboard: "Painel",
+    about: "Sobre",
+    help: "Ajuda",
+    follow: "Siga-nos",
+    logout: "Sair",
+    welcome: "Bem-vindo,",
+    checking: "VERIFICANDO...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Uso total de RICHCRASH:",
+    blokTotal: "Uso total de BLOKCRASH:",
+    iosTotal: "Uso total de RICHXIOS:",
+    iosV2Total: "Uso total de RICHXIOSV2:",
+    liveConsole: "CONSOLE AO VIVO",
+    systemReady: "Sistema pronto..."
+  },
+
+  hi: {
+    name: "हिन्दी",
+    flag: "🇮🇳",
+    dashboard: "डैशबोर्ड",
+    about: "हमारे बारे में",
+    help: "सहायता",
+    follow: "हमें फ़ॉलो करें",
+    logout: "लॉग आउट",
+    welcome: "स्वागत है,",
+    checking: "जाँच हो रही है...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH का कुल उपयोग:",
+    blokTotal: "BLOKCRASH का कुल उपयोग:",
+    iosTotal: "RICHXIOS का कुल उपयोग:",
+    iosV2Total: "RICHXIOSV2 का कुल उपयोग:",
+    liveConsole: "लाइव कंसोल",
+    systemReady: "सिस्टम तैयार है..."
+  },
+
+  he: {
+    name: "עברית",
+    flag: "🇮🇱",
+    dashboard: "לוח בקרה",
+    about: "אודות",
+    help: "עזרה",
+    follow: "עקבו אחרינו",
+    logout: "התנתקות",
+    welcome: "ברוך הבא,",
+    checking: "בודק...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "סך השימוש ב-RICHCRASH:",
+    blokTotal: "סך השימוש ב-BLOKCRASH:",
+    iosTotal: "סך השימוש ב-RICHXIOS:",
+    iosV2Total: "סך השימוש ב-RICHXIOSV2:",
+    liveConsole: "מסוף חי",
+    systemReady: "המערכת מוכנה..."
+  },
+
+  fr: {
+    name: "Français",
+    flag: "🇫🇷",
+    dashboard: "Tableau de bord",
+    about: "À propos",
+    help: "Aide",
+    follow: "Suivez-nous",
+    logout: "Déconnexion",
+    welcome: "Bienvenue,",
+    checking: "VÉRIFICATION...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Utilisation totale de RICHCRASH :",
+    blokTotal: "Utilisation totale de BLOKCRASH :",
+    iosTotal: "Utilisation totale de RICHXIOS :",
+    iosV2Total: "Utilisation totale de RICHXIOSV2 :",
+    liveConsole: "CONSOLE EN DIRECT",
+    systemReady: "Système prêt..."
+  },
+
+  de: {
+    name: "Deutsch",
+    flag: "🇩🇪",
+    dashboard: "Dashboard",
+    about: "Über uns",
+    help: "Hilfe",
+    follow: "Folge uns",
+    logout: "Abmelden",
+    welcome: "Willkommen,",
+    checking: "ÜBERPRÜFUNG...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH Gesamtnutzung:",
+    blokTotal: "BLOKCRASH Gesamtnutzung:",
+    iosTotal: "RICHXIOS Gesamtnutzung:",
+    iosV2Total: "RICHXIOSV2 Gesamtnutzung:",
+    liveConsole: "LIVE-KONSOLE",
+    systemReady: "System bereit..."
+  },
+
+  it: {
+    name: "Italiano",
+    flag: "🇮🇹",
+    dashboard: "Dashboard",
+    about: "Informazioni",
+    help: "Aiuto",
+    follow: "Seguici",
+    logout: "Esci",
+    welcome: "Benvenuto,",
+    checking: "CONTROLLO...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Utilizzo totale RICHCRASH:",
+    blokTotal: "Utilizzo totale BLOKCRASH:",
+    iosTotal: "Utilizzo totale RICHXIOS:",
+    iosV2Total: "Utilizzo totale RICHXIOSV2:",
+    liveConsole: "CONSOLE LIVE",
+    systemReady: "Sistema pronto..."
+  },
+
+  ja: {
+    name: "日本語",
+    flag: "🇯🇵",
+    dashboard: "ダッシュボード",
+    about: "概要",
+    help: "ヘルプ",
+    follow: "フォロー",
+    logout: "ログアウト",
+    welcome: "ようこそ、",
+    checking: "確認中...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH 総使用回数：",
+    blokTotal: "BLOKCRASH 総使用回数：",
+    iosTotal: "RICHXIOS 総使用回数：",
+    iosV2Total: "RICHXIOSV2 総使用回数：",
+    liveConsole: "ライブコンソール",
+    systemReady: "システム準備完了..."
+  },
+
+  ko: {
+    name: "한국어",
+    flag: "🇰🇷",
+    dashboard: "대시보드",
+    about: "소개",
+    help: "도움말",
+    follow: "팔로우",
+    logout: "로그아웃",
+    welcome: "환영합니다,",
+    checking: "확인 중...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH 총 사용량:",
+    blokTotal: "BLOKCRASH 총 사용량:",
+    iosTotal: "RICHXIOS 총 사용량:",
+    iosV2Total: "RICHXIOSV2 총 사용량:",
+    liveConsole: "실시간 콘솔",
+    systemReady: "시스템 준비 완료..."
+  },
+
+  ar: {
+    name: "العربية",
+    flag: "🇸🇦",
+    dashboard: "لوحة التحكم",
+    about: "حول",
+    help: "المساعدة",
+    follow: "تابعنا",
+    logout: "تسجيل الخروج",
+    welcome: "مرحباً،",
+    checking: "جارٍ التحقق...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "إجمالي استخدام RICHCRASH:",
+    blokTotal: "إجمالي استخدام BLOKCRASH:",
+    iosTotal: "إجمالي استخدام RICHXIOS:",
+    iosV2Total: "إجمالي استخدام RICHXIOSV2:",
+    liveConsole: "وحدة التحكم المباشرة",
+    systemReady: "النظام جاهز..."
+  },
+
+  tr: {
+    name: "Türkçe",
+    flag: "🇹🇷",
+    dashboard: "Kontrol Paneli",
+    about: "Hakkında",
+    help: "Yardım",
+    follow: "Bizi takip edin",
+    logout: "Çıkış yap",
+    welcome: "Hoş geldiniz,",
+    checking: "KONTROL EDİLİYOR...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "RICHCRASH toplam kullanımı:",
+    blokTotal: "BLOKCRASH toplam kullanımı:",
+    iosTotal: "RICHXIOS toplam kullanımı:",
+    iosV2Total: "RICHXIOSV2 toplam kullanımı:",
+    liveConsole: "CANLI KONSOL",
+    systemReady: "Sistem hazır..."
+  },
+
+  id: {
+    name: "Indonesia",
+    flag: "🇮🇩",
+    dashboard: "Dasbor",
+    about: "Tentang",
+    help: "Bantuan",
+    follow: "Ikuti kami",
+    logout: "Keluar",
+    welcome: "Selamat datang,",
+    checking: "MEMERIKSA...",
+    android: "ANDROID BVG",
+    ios: "iOS BVG",
+    richTotal: "Total penggunaan RICHCRASH:",
+    blokTotal: "Total penggunaan BLOKCRASH:",
+    iosTotal: "Total penggunaan RICHXIOS:",
+    iosV2Total: "Total penggunaan RICHXIOSV2:",
+    liveConsole: "KONSOL LANGSUNG",
+    systemReady: "Sistem siap..."
+  }
+
+};
+
+
+/* CHANGE LANGUAGE */
+
+function changeLanguage(lang) {
+
+  const selected = xeonDashboardTranslations[lang];
+
+  if (!selected) return;
+
+  // Save selected language
+
+  localStorage.setItem('xeon_language', lang);
+
+  // HTML language
+
+  document.documentElement.lang = lang;
+
+  // RTL support
+
+  document.documentElement.dir =
+    ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
+
+  // Translate elements
+
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+
+    const key = element.dataset.i18n;
+
+    if (selected[key] !== undefined) {
+      element.textContent = selected[key];
+    }
+
+  });
+
+  // Update language selector
+
+  document.getElementById('currentFlag').textContent = selected.flag;
+
+  document.getElementById('currentLanguage').textContent = selected.name;
+
+  // Mark selected option
+
+  document.querySelectorAll('.language-option').forEach(button => {
+
+    button.classList.toggle(
+      'selected',
+      button.dataset.lang === lang
+    );
+
+  });
+
+  // Close menu
+
+  document.getElementById('languageDropdown')
+    .classList.remove('active');
+
+}
+
+
+/* LANGUAGE MENU */
+
+function toggleLanguageMenu() {
+
+  document.getElementById('languageDropdown')
+    .classList.toggle('active');
+
+}
+
+
+/* CLOSE MENU OUTSIDE */
+
+document.addEventListener('click', function(event) {
+
+  const container = document.querySelector('.language-container');
+
+  if (container && !container.contains(event.target)) {
+
+    document.getElementById('languageDropdown')
+      .classList.remove('active');
+
+  }
+
+});
+
+
+/* RESTORE SAVED LANGUAGE */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const savedLanguage =
+    localStorage.getItem('xeon_language') || 'en';
+
+  changeLanguage(
+    xeonDashboardTranslations[savedLanguage]
+      ? savedLanguage
+      : 'en'
+  );
+
+});
+
+</script>
+
+<!-- ORIGINAL SCRIPTS -->
+
+<script src="js/app.js"></script>
+
+<script src="js/occult-bg.js"></script>
+
 </body>
-</html>
+  </html>
+  
