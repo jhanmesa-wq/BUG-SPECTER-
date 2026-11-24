@@ -22004,9 +22004,7 @@ botInstance.onText(/\/addresell(?:\s(.+))?/, async (msg, match) => {
 
     if (msg.chat.type !== 'private') return;
 
-    const membership = await checkMembership(chatId, senderId, isRootBot);
-    if (!membership.isMember) return;
-
+    
     const userBot = getUserBot(botInstance);
 
     if (!CONFIG.owner.includes(senderId) && !db.OwnerUsers.includes(senderId)) {
